@@ -13,13 +13,9 @@ const Projects = () => {
                     <table className="table table-responsive-sm">
                         <tbody>
                         <tr>
-                            <td className="d-none d-lg-table-cell">Dates</td>
                             <td className="d-none d-lg-table-cell">
                                 January 2020 - Present
                                 </td>
-                            </tr>
-                            <tr>
-                            <td className="d-none d-lg-table-cell">github</td>
                             <td className="d-none d-lg-table-cell">
                                 <a href="https://github.com/chung-ejy/longshot">
                                 https://github.com/chung-ejy/longshot</a></td>
@@ -40,13 +36,9 @@ const Projects = () => {
                     <table className="table table-responsive-sm">
                         <tbody>
                         <tr>
-                            <td className="d-none d-lg-table-cell">Dates</td>
                             <td className="d-none d-lg-table-cell">
                                 January 2022 - July 2022
                                 </td>
-                            </tr>
-                            <tr>
-                            <td className="d-none d-lg-table-cell">github</td>
                             <td className="d-none d-lg-table-cell">
                                 <a href="https://github.com/chung-ejy/comet">
                                 https://github.com/chung-ejy/comet</a></td>
