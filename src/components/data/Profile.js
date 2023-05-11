@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React from 'react'
 const Profile = () => {
     return (<div className="card card-body mt-4 mb-4">
                 <h3 className="card-title">Eric Ji-Yong Chung</h3>

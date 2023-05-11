@@ -3,7 +3,8 @@ import {
         STOP_LOADING, 
         SET_ERROR, 
         SET_TITLE,
-        CLEAR_ERROR
+        CLEAR_ERROR,
+        GET_LONGSHOT
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -14,6 +15,7 @@ import axios from "axios"
 const DataState = props => {
     const initialState = {
         title: "Portfolio",
+        longshot: {},
         error:null,
         loading:false
     }
@@ -51,6 +53,21 @@ const DataState = props => {
         });
     }
 
+    const getLongshot = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api`, { params: data });
+          console.log(response.data)
+          dispatch({
+            type: GET_LONGSHOT,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
     
 
     return (
@@ -59,6 +76,7 @@ const DataState = props => {
             error:state.error,
             title:state.title,
             text:state.text,
+            getLongshot,
             clearError,
             setError,
             setTitle,

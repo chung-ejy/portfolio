@@ -1,9 +1,7 @@
-import React, {useContext, useEffect, useState, Fragment} from 'react';
-import DataContext from "../../context/data/dataContext"
+import React from 'react';
 import Profile from "../data/Profile"
 import Projects from '../data/Projects';
 const Dashboard = () => {
-    const dataContext = useContext(DataContext)
     return (<div className="container">
         <div className="row">
         <div className="col">
