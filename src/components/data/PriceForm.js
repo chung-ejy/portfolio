@@ -1,17 +1,28 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import DataContext from '../../context/data/dataContext';
 
-const LongshotForm = () => {
+const PriceForm = ({title}) => {
   const dataContext = useContext(DataContext);
   const { longshot, getLongshot } = dataContext;
-
   const weekRange = [...Array(14).keys()]
   const updatedWeekRange = weekRange.concat(["prediction","project"])
 
   const [state, setState] = useState({
     ...Object.fromEntries(updatedWeekRange.map((x) => [x.toString(), 0])),
-    project: 'longshot',
+    project: title,
   });
+
+  useEffect(() => {
+    if (longshot) {
+      const { prediction, project, ...weekRange } = longshot;
+      setState({
+        ...state,
+        prediction: prediction || state.prediction,
+        project: project || state.project,
+        ...weekRange
+      });
+    }
+  }, [longshot, state, title]);
 
 const onFileChange = (e) => {
   const reader = new FileReader();
@@ -45,7 +56,9 @@ const onFileChange = (e) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    getLongshot(state);
+    if (title == "Longshot") {
+      getLongshot(state)
+    }
   };
 
   const onChange = (e) => {
@@ -60,18 +73,20 @@ const onFileChange = (e) => {
         <h3 className="card-title">{state.project}</h3>
       </div>
       <div className="card-body">
+      <h1>{state.prediction}</h1>
+
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <label htmlFor="csvFile">CSV File</label>
             <input type="file" id="csvFile" className="form-control-file" accept=".csv" onChange={onFileChange} />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form>
-        <h6>{state.prediction}</h6>
+
       </div>
     </div>
   );
 };
 
-export default LongshotForm;
+export default PriceForm;
 

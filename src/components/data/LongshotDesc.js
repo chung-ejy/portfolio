@@ -17,10 +17,9 @@ const LongshotDesc = () => {
                             </tbody>
                     </table>
                     <p>
-                    Architected a trade simulation platform with Jupyter Notebooks to transform training data, model regression and
-                        classification predictions utilizing algorithms provided by sci-kit learn and back tested various trading strategies. 
-                        Backtested quarterly fundamental strategies and weekly trade signal strategies in python for industry based
-                        stock categories resulting in a strategy with overperforming yearly historical gains compared to the SP500
+                        Average weekly price predictor for the S&P 500 based on previous 14 week averages. 
+                        Disclaimer: For educational purposes only. The following
+                        domain is not liable for any investment decisions made by any party.
                     </p>
 
                     </div>)
