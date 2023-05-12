@@ -16,8 +16,8 @@ import axios from "axios"
 const DataState = props => {
     const initialState = {
         title: "Longshot",
-        price:null,
-        song:null,
+        price:{},
+        song:{},
         error:null,
         loading:false
     }
@@ -55,15 +55,16 @@ const DataState = props => {
         });
     }
 
-    const getPrice = async (data) => {
+    const getPrice = (data) => {
         try {
           setLoading();
-          const response = await axios.get(`${base_url}/api/api`, { params: data });
-          console.log(response.data)
-          dispatch({
-            type: GET_PRICE   ,
-            payload: response.data
-          });
+          axios.get(`${base_url}/api/api`, { params: data }).then(res => {
+                dispatch({
+                type: GET_PRICE   ,
+                payload: res.data
+                });
+            }
+          )
         } catch (err) {
           stopLoading();
           setError(err.message, "danger");
@@ -74,9 +75,8 @@ const DataState = props => {
         try {
           setLoading();
           const response = await axios.get(`${base_url}/api/api`, { params: data });
-          console.log(response.data)
           dispatch({
-            type: GET_SONG   ,
+            type: GET_SONG,
             payload: response.data
           });
         } catch (err) {

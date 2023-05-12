@@ -3,7 +3,7 @@ import DataContext from '../../context/data/dataContext';
 
 const PriceForm = () => {
   const dataContext = useContext(DataContext);
-  const { price, getPrice, title } = dataContext;
+  const { loading, price, getPrice, title } = dataContext;
   const weekRange = [...Array(14).keys()]
   const updatedWeekRange = weekRange.concat(["prediction","project"])
 
@@ -12,20 +12,16 @@ const PriceForm = () => {
     project: title,
   });
 
-  // useEffect(() => {
-  //   if (price) {
-  //     const { prediction, project, ...weekRange } = price;
-  //     setState({
-  //       ...state,
-  //       prediction: prediction || state.prediction,
-  //       project: project || state.project,
-  //       ...weekRange
-  //     });
-  //   } else {
-  //     setState({...state,
-  //             project: title})
-  //   }
-  // }, [price, state, title]);
+  useEffect(() => {
+    if (title !== state.title) {
+      setState({
+        ...state,
+        ...weekRange,
+        project: title,
+        prediction:0
+      });
+    } 
+  }, [price, loading, title]);
 
 const onFileChange = (e) => {
   const reader = new FileReader();
@@ -65,22 +61,23 @@ const onFileChange = (e) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-      getPrice(state)
+    getPrice(state)
   };
   
 
-  return (
+  return (loading ? "" :
     <div className="card">
-      <div className="card-header">
+      {/* <div className="card-header">
         <h3 className="card-title">{state.project}</h3>
-      </div>
+      </div> */}
       <div className="card-body">
-      <h1>{state.prediction}</h1>
-
+      {Object.keys(price).length < 1 || loading ? "" : <h1>{price.prediction}</h1>}
         <form onSubmit={onSubmit}>
           <div className="form-group">
-            <label htmlFor="csvFile">CSV File</label>
-            <input type="file" id="csvFile" className="form-control-file" accept=".csv" onChange={onFileChange} />
+          <div className="mb-3 row">
+            <label htmlFor="formFile" className="form-label">Weekly Average Prices</label>
+            <input className="form-control ml-2" type="file" id="formFile" />
+          </div>
           </div>
           <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form>

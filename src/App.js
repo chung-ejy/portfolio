@@ -8,7 +8,7 @@ export const App = () => {
         return (
         <DataState>
             <Router>
-            <Header />
+            {/* <Header /> */}
                 <Routes>
                     <Route exact path ="/" element={<Dashboard />} />
                 </Routes>
@@ -17,5 +17,4 @@ export const App = () => {
         </DataState>
     )
 }
-
 export default App

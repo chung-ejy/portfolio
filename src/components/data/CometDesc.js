@@ -16,10 +16,18 @@ const CometDesc = () => {
                 </tr>
                 </tbody>
         </table>
-        <p>
-        Average weekly price predictor for Bitcoin to USD based on previous 14 week averages. 
-        Disclaimer: For educational purposes only. The following domain is not liable for any investment decisions made by any party.
+        <p className="m-2">
+            Description: Average weekly price predictor for bitcoin prices based on previous 14 week averages. 
         </p>
+        <p className="text-success">
+            Usage: Input a csv table with columns numbered 0 - 13. 
+            Note: model will only provide average predictions for the upcoming week. 
+        </p>         
+                    <p className="text-danger">
+                        Disclaimer: For educational purposes only. The following
+                        domain is not liable for any investment decisions made by any party.
+                        Please consult an investment advisor.
+                    </p>
     </div>)
 }
 

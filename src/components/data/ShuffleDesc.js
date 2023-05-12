@@ -16,10 +16,18 @@ const ShuffleDesc = () => {
             </tr>
             </tbody>
     </table>
-        <p>
-        Researched and predicted song relevancy by developing a playlist search algorithm to retrieve possible song
-        recommendations based on neighboring playlists with attendance of the queried song. Analyzed the effects of a follower based weighing system and the number of songs in a given recommended
-            playlist to better understand the notion of quantity over quality in recommendation standards.
+        <p className="m-2">
+            Description: Song recommendations based off Spotify playlist dataset that can be
+            <a className="m-1" href="https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge/dataset_files">
+                found here.
+            </a>
+            <p className="text-success">
+                Usage: Type a track name alongside the artist. 
+                Note: Limited dataset, think 2010s pop .. 
+            </p>
+            <p className="text-danger">
+                Disclaimer: This project is not an official Spotify product.
+            </p>         
         </p>
     </div>)
 }

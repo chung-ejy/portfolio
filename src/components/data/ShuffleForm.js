@@ -5,22 +5,19 @@ const ShuffleForm = () => {
   const [state, setState] = useState({
     artist_name: '',
     track_name: '',
-    rec_artist: 'default',
-    rec_track: 'default'
   });
 
   const dataContext = useContext(DataContext);
-  const { song, getSong } = dataContext;
+  const { loading, song, getSong } = dataContext;
 
   useEffect(() => {
-    if (song) {
+    if (Object.keys(song).length > 0) {
       setState(prevState => ({
-        ...prevState,
-        rec_artist: song.rec_artist,
-        rec_track: song.rec_track
+        artist_name: '',
+        track_name: ''
       }));
     }
-  }, [song]);
+  }, [song,loading]);
 
   const handleChange = e => {
     setState(prevState => ({
@@ -32,21 +29,16 @@ const ShuffleForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     getSong(state);
-    setState(prevState => ({
-      ...prevState,
-      artist_name: '',
-      track_name: ''
-    }));
   };
 
-  return (
+  return (loading ? "" :
     <div className="card">
-      <div className="card-header">
+      {/* <div className="card-header">
         <h3 className="card-title">Shuffle</h3>
-      </div>
+      </div> */}
       <div className="card-body">
-        <h1>{"Track: " + state.rec_track}</h1>
-        <h1>{"Artist: " + state.rec_artist}</h1>
+        {Object.keys(song).length < 1 || loading ? "" : <h1>{"Artist: " + song.artist_rec}</h1>}
+        {Object.keys(song).length < 1 || loading ? "" : <h1>{"Song: " + song.track_rec}</h1>}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
