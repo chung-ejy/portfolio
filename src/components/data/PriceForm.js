@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import DataContext from '../../context/data/dataContext';
-
+import Loading from '../alerts/Loading';
 const PriceForm = () => {
   const dataContext = useContext(DataContext);
   const { loading, price, getPrice, title } = dataContext;
@@ -11,7 +11,8 @@ const PriceForm = () => {
     ...Object.fromEntries(updatedWeekRange.map((x) => [x.toString(), 0])),
     project: title,
   });
-
+  const tableheads = [0,1,2,"...",12,13]
+  const tablevals = [92,91,93,"...",93,95]
   useEffect(() => {
     if (title !== state.title) {
       setState({
@@ -65,19 +66,25 @@ const onFileChange = (e) => {
   };
   
 
-  return (loading ? "" :
-    <div className="card">
-      {/* <div className="card-header">
-        <h3 className="card-title">{state.project}</h3>
-      </div> */}
-      <div className="card-body">
-      {Object.keys(price).length < 1 || loading ? "" : <h1>{price.prediction}</h1>}
+  return (loading ? <Loading /> :
+    <div className="card bg-transparent">
+      <div className="card-body text-center">
+        <h6>CSV File Example</h6>
+        <table className="table table-bordered table-responsive">
+          <thead className="thead-dark">
+            <tr>{tableheads.map((x) => <th>{String(x)}</th>)}</tr>
+          </thead>
+          <tbody>
+            <tr>{tablevals.map((x) => <td>{String(x)}</td>)}</tr>
+          </tbody>
+        </table>
+        {Object.keys(price).length < 1 || loading ? 
+                        ""
+                        : <h1>{`Prediction: ${price.prediction}`}</h1>
+                        }
         <form onSubmit={onSubmit}>
           <div className="form-group">
-          <div className="mb-3 row">
-            <label htmlFor="formFile" className="form-label">Weekly Average Prices</label>
-            <input className="form-control ml-2" type="file" id="formFile" />
-          </div>
+            <input className="form-control" type="file" id="formFile" />
           </div>
           <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form>

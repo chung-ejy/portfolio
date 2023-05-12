@@ -1,34 +1,44 @@
 import React from 'react'
+import PriceForm from './PriceForm'
 
 const CometDesc = () => {
-    return(<div className="card cardbody">
-        <h1>Comet</h1>
-        <h3>Cryptocurrency Trading Bot</h3>
-        <table className="table table-responsive-sm">
-            <tbody>
-            <tr>
-                <td className="d-none d-lg-table-cell">
-                    January 2022 - July 2022
-                    </td>
-                <td className="d-none d-lg-table-cell">
-                    <a href="https://github.com/chung-ejy/comet">
-                    https://github.com/chung-ejy/comet</a></td>
-                </tr>
+    const title = "Comet"
+    const tagline = "Bitcoin Price Predictor"
+    const dates = "January 2022 - July 2022"
+    const projectLink = "https://github.com/chung-ejy/comet"
+    const description = "Description: Average weekly price predictor for bitcoin prices based on previous 14 week averages. "
+    const tooltips = "Usage: Input a csv table with columns numbered 0 - 13. Note: model will only provide average predictions for the upcoming week. "
+    const disclaimer = "Disclaimer: For educational purposes only. The following domain is not liable for any investment decisions made by any party. Please consult an investment advisor."
+    return(
+        <div className="card cardbody bg-transparent p-2">
+            <h1 className="cardtitle text-primary text-center">{title}</h1>
+            <h3 className="text-center">{tagline}</h3>
+            <table className="table table-responsive-sm text-center">
+                <tbody>
+                    <tr>
+                        <td className="d-none d-lg-table-cell">
+                            {dates}
+                        </td>
+                        <td className="d-none d-lg-table-cell">
+                            <a href='{projectLink}'>
+                                {projectLink}
+                            </a>
+                        </td>
+                    </tr>
                 </tbody>
-        </table>
+            </table>
+            <PriceForm />
             <p className="m-2">
-                Description: Average weekly price predictor for bitcoin prices based on previous 14 week averages. 
+                {description}
             </p>
-            <p className="text-success">
-                Usage: Input a csv table with columns numbered 0 - 13. 
-                Note: model will only provide average predictions for the upcoming week. 
+            <p className="m-2 text-success">
+                {tooltips} 
             </p>         
-            <p className="text-danger">
-                Disclaimer: For educational purposes only. The following
-                domain is not liable for any investment decisions made by any party.
-                Please consult an investment advisor.
+            <p className="m-2 text-danger">
+                {disclaimer}
             </p>
-    </div>)
+        </div>
+    )
 }
 
 export default CometDesc

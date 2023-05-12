@@ -1,14 +1,15 @@
 import React from 'react';
 import Profile from "../data/Profile"
 import Projects from '../data/Projects';
+import Loading from '../alerts/Loading';
 const Dashboard = () => {
     return (
     <div className="container">
+        <div className="row">      
+        <Profile />
+        </div>            
         <div className="row">
-        <div className="col text-center mt-5">            
             <Projects />
-            <Profile />
-        </div>
         </div>
         </div>
     );

@@ -6,15 +6,16 @@ import Footer from "./components/layout/Footer"
 import Dashboard from "./components/pages/Dashboard"
 export const App = () => {
         return (
-        <DataState>
-            <Router>
-            {/* <Header /> */}
-                <Routes>
-                    <Route exact path ="/" element={<Dashboard />} />
-                </Routes>
-            </Router>
-            <Footer />
-        </DataState>
+            <DataState>
+                <Router>
+                <Header />
+                    <Routes>
+                        <Route exact path ="/" element={<Dashboard />} />
+                    </Routes>
+                </Router>
+                {/* <Footer /> */}
+            </DataState>
     )
 }
+
 export default App

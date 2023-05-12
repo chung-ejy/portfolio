@@ -5,56 +5,29 @@ import ShuffleDesc from './ShuffleDesc'
 import PriceForm from './PriceForm'
 import ShuffleForm from './ShuffleForm'
 import DataContext from '../../context/data/dataContext';
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 const Projects = () => {
     const dataContext = useContext(DataContext);
-    const { price,song,title, setTitle} = dataContext
-    const [state,setState] = useState("prototype")
+    const projects = ["Longshot","Comet","Shuffle"]
+    const { price,song, title, setTitle} = dataContext
+    // const [state,setState] = useState("prototype")
     const onButtonClick = (e) => {
       e.preventDefault();
       setTitle(e.target.name);
     };
 
-    const onModeClick = (e) => {
-      if (state === "description") {
-        setState("prototype")
-      } else {
-        setState("description")
-      }
+    // const onModeClick = (e) => {
+    //   if (state === "description") {
+    //     setState("prototype")
+    //   } else {
+    //     setState("description")
+    //   }
       
-    }
+    // }
     return (
-      <div className="card card-body mt-4 mb-4">
-        <h1>Projects</h1>
-        <div className="row">
-          {state == "description" ? 
-          <div className="col">
-          {title === "Shuffle" ? (
-            <ShuffleForm />
-          ) : (
-            <PriceForm /> // Update this line
-          )}
-          </div> : <div className="col">
-            {title === "Longshot" ? (
-              <LongshotDesc />
-            ) : title === "Comet" ? (
-              <CometDesc />
-            ) : (
-              <ShuffleDesc />
-            )}
-          </div>
-          }
-        </div>
-        <button
-            name={state}
-            className={`row btn btn-outline-info btn-sm m-3`}
-            onClick={onModeClick}
-          >
-            {state}
-          </button>
-        <div className="row">
-          
+      <div className="card card-body mt-4 mb-4 bg-transparent">
+        <h1 className="text-primary text-left">Projects</h1>
+        <div className="row h-5 m-1">
             <button            
             name="Longshot"
             className={`col btn btn-${title=="Longshot" ? "primary" : "secondary"} btn-xl m-2`}
@@ -76,7 +49,33 @@ const Projects = () => {
             <i className={`fas fa-xl fa-music text-${title=="Shuffle" ? "light" : "primary"}`}></i>
           </button>
         </div>
-
+        <div className="row h-5">
+          {/* {state == "description" ?  */}
+          {/* <div className="col">
+          {title === "Shuffle" ? (
+            <ShuffleForm />
+          ) : (
+            <PriceForm /> // Update this line
+          )}
+          </div>   */}
+          <div className="col">
+            {title === "Longshot" ? (
+              <LongshotDesc />
+            ) : title === "Comet" ? (
+              <CometDesc />
+            ) : (
+              <ShuffleDesc />
+            )}
+          </div>
+          {/* } */}
+        </div>
+        {/* <button
+            name={state}
+            className={`row btn btn-outline-info btn-sm m-3`}
+            onClick={onModeClick}
+          >
+            {state}
+          </button> */}
       </div>
     );
   };

@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import DataContext from '../../context/data/dataContext';
+import Loading from '../alerts/Loading';
 
 const ShuffleForm = () => {
   const [state, setState] = useState({
@@ -31,15 +32,17 @@ const ShuffleForm = () => {
     getSong(state);
   };
 
-  return (loading ? "" :
-    <div className="card">
+  return (loading ? <Loading />
+:
+    <div className="card text-center">
       {/* <div className="card-header">
         <h3 className="card-title">Shuffle</h3>
       </div> */}
       <div className="card-body">
         {Object.keys(song).length < 1 || loading ? "" : <h1>{"Artist: " + song.artist_rec}</h1>}
         {Object.keys(song).length < 1 || loading ? "" : <h1>{"Song: " + song.track_rec}</h1>}
-        <form onSubmit={handleSubmit}>
+        <form className="m-2" onSubmit={handleSubmit}>
+          <div className="form-group m-2">
           <input
             type="text"
             placeholder="Enter artist name"
@@ -47,6 +50,8 @@ const ShuffleForm = () => {
             value={state.artist_name}
             onChange={handleChange}
           />
+          </div>
+          <div className="form-group">
           <input
             type="text"
             placeholder="Enter track name"
@@ -54,7 +59,8 @@ const ShuffleForm = () => {
             value={state.track_name}
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          </div>
+          <button className="btn btn-primary btn-sm m-2" type="submit">Submit</button>
         </form>
       </div>
     </div>
