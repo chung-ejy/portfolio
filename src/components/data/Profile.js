@@ -9,11 +9,17 @@ const Profile = () => {
                     <MDBIcon fab icon='github' />
                   </MDBBtn>
         </div>
+        <div className="col m-1">
+          <h3 className="">
+          <i className={`fas fa-egg fas-lg" text-primary`}></i>
+          </h3>
+        </div>
         <div className="col">
         <MDBBtn className='m-1' href='https://www.linkedin.com/in/chung-ejy/'>
                     <MDBIcon fab icon='linkedin' />
                   </MDBBtn>
         </div>
+
           </div>
         </div>
   );
