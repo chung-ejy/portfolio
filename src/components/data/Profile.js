@@ -11,7 +11,7 @@ const Profile = () => {
         </div>
         <div className="col m-1">
           <h3 className="">
-          <i className={`fas fa-egg fas-lg" text-primary`}></i>
+          <a href="https://www.instagram.com/emiru.jpg/"><i className={`fas fa-egg fas-lg" text-primary`}></i></a>
           </h3>
         </div>
         <div className="col">
