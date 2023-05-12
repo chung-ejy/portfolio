@@ -17,10 +17,8 @@ const CometDesc = () => {
                 </tbody>
         </table>
         <p>
-        Researched optimal cryptocurrency trading strategies by leveraging brute force and machine learning avenues to
-        ensure high performing bot trading behavior resulting in competitive historical year to year performance. Investigated pricing and optimal service inclusion of pricing tiers by providing both services and options resulting
-        in context behind standardized pricing models in comparison to premium models. Packaged bot and backtesting services leveraging a Django backend and React frontend to provide user friendly
-        options to learn about and experience the cryptocurrency market and facilitate investment discipline
+        Average weekly price predictor for Bitcoin to USD based on previous 14 week averages. 
+        Disclaimer: For educational purposes only. The following domain is not liable for any investment decisions made by any party.
         </p>
     </div>)
 }

@@ -4,7 +4,8 @@ import {
         SET_ERROR, 
         SET_TITLE,
         CLEAR_ERROR,
-        GET_LONGSHOT
+        GET_PRICE,
+        GET_SONG
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -14,8 +15,9 @@ import axios from "axios"
 
 const DataState = props => {
     const initialState = {
-        title: "Portfolio",
-        longshot: {},
+        title: "Longshot",
+        price:null,
+        song:null,
         error:null,
         loading:false
     }
@@ -53,13 +55,28 @@ const DataState = props => {
         });
     }
 
-    const getLongshot = async (data) => {
+    const getPrice = async (data) => {
         try {
           setLoading();
           const response = await axios.get(`${base_url}/api/api`, { params: data });
           console.log(response.data)
           dispatch({
-            type: GET_LONGSHOT,
+            type: GET_PRICE   ,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+    
+    const getSong = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api`, { params: data });
+          console.log(response.data)
+          dispatch({
+            type: GET_SONG   ,
             payload: response.data
           });
         } catch (err) {
@@ -76,10 +93,13 @@ const DataState = props => {
             error:state.error,
             title:state.title,
             text:state.text,
-            getLongshot,
-            clearError,
-            setError,
+            price:state.price,
+            song:state.song,
+            getPrice,
+            getSong,
             setTitle,
+            clearError,
+            setError
         }}>
             {props.children}
         </DataContext.Provider>

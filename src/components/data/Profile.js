@@ -1,39 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 const Profile = () => {
-    return (<div className="card card-body mt-4 mb-4">
-                <h3 className="card-title">Eric Ji-Yong Chung</h3>
-                <div className="row">
-                    <div className="col">
-                    </div>
-                </div>
-                <div className='row'>
-                            <div className="col">
-                            <div className="card card-body mt-4 mb-4">
-                                <table className="table table-responsive-sm">
-                                    <tbody>
-                                        <tr>
-                                        <td className="d-none d-lg-table-cell">github</td>
-                                        <td className="d-none d-lg-table-cell">
-                                            <a href="https://github.com/chung-ejy">
-                                            https://github.com/chung-ejy</a></td>
-                                        </tr>
-                                        <tr>
-                                        <td className="d-none d-lg-table-cell">linkedin</td>
-                                        <td className="d-none d-lg-table-cell">
-                                            <a href="https://www.linkedin.com/in/chung-ejy/">
-                                            https://www.linkedin.com/in/chung-ejy/</a></td>
-                                        </tr>
-                                        <tr>
-                                        <td className="d-none d-lg-table-cell">email</td>
-                                        <td className="d-none d-lg-table-cell">chung.ejy@gmail.com</td>
-                                        </tr>
-                                        </tbody>
-                                </table>
-                            </div>
-                            </div>
-                        </div>
+  return (
+    <div className="card card-body mt-4 mb-4">
+      <h3 className="card-title">Eric Ji-Yong Chung</h3>
+      <div className="row">
+        <div className="col">
+                  <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='https://github.com/chung-ejy'>
+                    <MDBIcon fab icon='github' />
+                  </MDBBtn>
         </div>
-    )
-}
+        <div className="col">
+        <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='https://www.linkedin.com/in/chung-ejy/'>
+                    <MDBIcon fab icon='linkedin' />
+                  </MDBBtn>
+        </div>
+                  {/* <td className="d-none d-lg-table-cell">
+                  <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='chung.ejy@gmail.com'>
+                    <MDBIcon fab icon='email' />
+                  </MDBBtn>
+                  </td> */}
+          </div>
+        </div>
+  );
+};
 
-export default Profile
+export default Profile;

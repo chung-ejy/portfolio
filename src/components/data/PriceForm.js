@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import DataContext from '../../context/data/dataContext';
 
-const PriceForm = ({title}) => {
+const PriceForm = () => {
   const dataContext = useContext(DataContext);
-  const { longshot, getLongshot } = dataContext;
+  const { price, getPrice, title } = dataContext;
   const weekRange = [...Array(14).keys()]
   const updatedWeekRange = weekRange.concat(["prediction","project"])
 
@@ -12,21 +12,30 @@ const PriceForm = ({title}) => {
     project: title,
   });
 
-  useEffect(() => {
-    if (longshot) {
-      const { prediction, project, ...weekRange } = longshot;
-      setState({
-        ...state,
-        prediction: prediction || state.prediction,
-        project: project || state.project,
-        ...weekRange
-      });
-    }
-  }, [longshot, state, title]);
+  // useEffect(() => {
+  //   if (price) {
+  //     const { prediction, project, ...weekRange } = price;
+  //     setState({
+  //       ...state,
+  //       prediction: prediction || state.prediction,
+  //       project: project || state.project,
+  //       ...weekRange
+  //     });
+  //   } else {
+  //     setState({...state,
+  //             project: title})
+  //   }
+  // }, [price, state, title]);
 
 const onFileChange = (e) => {
   const reader = new FileReader();
   const file = e.target.files[0];
+  if (!file) {
+    // Handle the error when no file is selected
+    console.error('No file selected');
+    // You can also display an error message to the user if needed
+    return;
+  }
 
   reader.onload = () => {
     const csvData = reader.result;
@@ -56,14 +65,7 @@ const onFileChange = (e) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (title == "Longshot") {
-      getLongshot(state)
-    }
-  };
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+      getPrice(state)
   };
   
 

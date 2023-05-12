@@ -1,4 +1,4 @@
-import { GET_LONGSHOT, SET_TITLE, SET_TEXT, SET_LOADING,
+import { GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
        SET_ERROR, CLEAR_ERROR, STOP_LOADING} from "./types";
 
 const main_reducer = (state,action) => {
@@ -37,12 +37,18 @@ const main_reducer = (state,action) => {
                 ...state,
                 title:action.payload
             }
-        case GET_LONGSHOT:
+        case GET_PRICE:
             return {
                 ...state,
-                longshot:action.payload,
+                price:action.payload,
                 loading:false
             }
+        case GET_SONG:
+                return {
+                    ...state,
+                    song:action.payload,
+                    loading:false
+                }
     }
 }
 
