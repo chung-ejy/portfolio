@@ -5,7 +5,7 @@ const ShuffleDesc = () => {
     const tagline = "Song Recommender"
     const dates = "July 2021 - August 2021"
     const projectLink = "https://github.com/chung-ejy/shuffle"
-    const description = "Description: Song recommendations based off Spotify playlist dataset that can be"
+    const description = "Description: Song recommendations based off Spotify playlist dataset that can be found"
     const tooltips = "Usage: Type a track name alongside the artist. Note: Limited dataset, think 2010s pop .."
     const disclaimer = "Disclaimer: This project is not an official Spotify product."
     return(<div className="card cardbody bg-transparent p-2">
@@ -28,12 +28,12 @@ const ShuffleDesc = () => {
     <ShuffleForm />
     <p className="m-2">
         {description}
-    </p>
-    <p className="m-2 text-success">
-        {tooltips}
         <a className="m-1" href="https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge/dataset_files">
             found here.
         </a> 
+    </p>
+    <p className="m-2 text-success">
+        {tooltips}
     </p>         
     <p className="m-2 text-danger">
         {disclaimer}
