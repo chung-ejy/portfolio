@@ -18,7 +18,11 @@ const ShuffleDesc = () => {
                     {dates}
                 </td>
                 <td className="d-none d-lg-table-cell">
+<<<<<<< HEAD
                     <a href={projectLink}>
+=======
+                    <a href={`${projectLink}`}>
+>>>>>>> dev
                         {projectLink}
                     </a>
                 </td>

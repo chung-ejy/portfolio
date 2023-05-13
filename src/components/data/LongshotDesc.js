@@ -20,7 +20,7 @@ const LongshotDesc = () => {
                                 {dates}
                             </td>
                             <td className="d-none d-lg-table-cell">
-                                <a href={'${projectLink}'}>
+                                <a href={`${projectLink}`}>
                                     {projectLink}
                                 </a>
                             </td>
