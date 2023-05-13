@@ -37,7 +37,11 @@ const FakerForm = () => {
 :
     <div className="card text-center">
       <div className="card-body">
-        {Object.keys(news).length < 1 || loading ? "" : <h1>{"Classification: " + news.classification}</h1>}
+        {Object.keys(news).length < 1 || loading ? "" : 
+                <h1 className={`text-${news.classification < 1 ? "danger":"success"}`}>
+                  {`${news.classification < 1 ? "FAKE":"TRUE"}`}
+                </h1>
+                }
         <form className="m-2" onSubmit={handleSubmit}>
           <div className="form-group m-2">
           <input

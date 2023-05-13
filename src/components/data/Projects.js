@@ -4,6 +4,7 @@ import CometDesc from './CometDesc'
 import ShuffleDesc from './ShuffleDesc'
 import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
+import DopaDesc from './DopaDesc';
 
 const Projects = () => {
     const dataContext = useContext(DataContext);
@@ -19,7 +20,7 @@ const Projects = () => {
 
     return (
       <div className="card card-body mt-4 mb-4 bg-transparent">
-        <h1 className="text-primary text-left">Projects</h1>
+        <h1 className="cardtitle text-primary text-center">Projects</h1>
         <div className="row h-5 m-1">
             <button            
             name="Longshot"
@@ -48,6 +49,13 @@ const Projects = () => {
           >
             <i className={`fas fa-xl fa-rss text-${title=="Faker" ? "light" : "primary"}`}></i>
           </button>
+          <button
+            name="Dopa"
+            className={`col btn btn-${title=="Dopa" ? "primary" : "secondary"} btn-xl m-2`}
+            onClick={onButtonClick}
+          >
+            <i className={`fas fa-xl fa-laugh-squint text-${title=="Dopa" ? "light" : "primary"}`}></i>
+          </button>
         </div>
         <div className="row h-5">
           <div className="col">
@@ -57,7 +65,8 @@ const Projects = () => {
               <CometDesc />
             ) : title === "Shuffle" ?(
               <ShuffleDesc />
-            ) : <FakerDesc />}
+            ) : title === "Faker" ? <FakerDesc />
+            : <DopaDesc />}
           </div>
         </div>
       </div>

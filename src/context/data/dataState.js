@@ -6,7 +6,8 @@ import {
         CLEAR_ERROR,
         GET_PRICE,
         GET_SONG,
-        GET_NEWS
+        GET_NEWS,
+        GET_LOL
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -20,6 +21,7 @@ const DataState = props => {
         price:{},
         song:{},
         news:{},
+        lol:{},
         error:null,
         loading:false
     }
@@ -60,7 +62,7 @@ const DataState = props => {
     const getPrice = (data) => {
         try {
           setLoading();
-          axios.get(`${base_url}/api/api`, { params: data }).then(res => {
+          axios.post(`${base_url}/api/api`, data).then(res => {
                 dispatch({
                 type: GET_PRICE   ,
                 payload: res.data
@@ -76,7 +78,7 @@ const DataState = props => {
     const getSong = async (data) => {
         try {
           setLoading();
-          const response = await axios.get(`${base_url}/api/api`, { params: data });
+          const response = await axios.post(`${base_url}/api/api`, data);
           dispatch({
             type: GET_SONG,
             payload: response.data
@@ -90,9 +92,23 @@ const DataState = props => {
       const getNews = async (data) => {
         try {
           setLoading();
-          const response = await axios.get(`${base_url}/api/api`, { params: data });
+          const response = await axios.post(`${base_url}/api/api`, data);
           dispatch({
             type: GET_NEWS,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
+      const getLol = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.post(`${base_url}/api/api`, data);
+          dispatch({
+            type: GET_LOL,
             payload: response.data
           });
         } catch (err) {
@@ -112,6 +128,8 @@ const DataState = props => {
             price:state.price,
             song:state.song,
             news:state.news,
+            lol:state.lol,
+            getLol,
             getNews,
             getPrice,
             getSong,
