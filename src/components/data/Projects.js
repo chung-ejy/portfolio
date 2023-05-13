@@ -30,9 +30,10 @@ const Projects = () => {
           {Object.keys(projects).map(x => (
             <button            
             name={x}
-            className={`col btn btn-${title==x ? "primary" : "secondary"} btn-xl m-2`}
+            key={x}
+            className={`col btn btn-${title===x ? "primary" : "secondary"} btn-xl m-2`}
             onClick={onButtonClick}>
-              <i className={`${projects[x]} text-${title==x ? "light" : "primary"}`}></i>
+              <i className={`${projects[x]} text-${title===x ? "light" : "primary"}`}></i>
             </button>
           ))}       
         </div>

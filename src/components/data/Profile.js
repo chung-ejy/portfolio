@@ -7,7 +7,7 @@ const Profile = () => {
       {/* <h1><i className="fas fa-user fa-xl text-primary"></i></h1> */}
       <div className="row">
         <div className="col">
-          <img className="img-fluid" style={imageStyle} src={headshot}></img>
+          <img alt="myface" className="img-fluid" style={imageStyle} src={headshot}></img>
         </div>
       </div> 
       <div className="row mt-3">
