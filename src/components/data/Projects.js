@@ -11,7 +11,6 @@ const Projects = () => {
     const onButtonClick = (e) => {
       e.preventDefault();
       setTitle(e.target.name);
-      console.log(title)
     };
 
     useEffect(() => {

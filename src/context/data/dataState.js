@@ -91,7 +91,6 @@ const DataState = props => {
         try {
           setLoading();
           const response = await axios.get(`${base_url}/api/api`, { params: data });
-          console.log(response.data)
           dispatch({
             type: GET_NEWS,
             payload: response.data
