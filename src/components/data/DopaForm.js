@@ -1,6 +1,6 @@
 import React, { useContext,useState,useEffect } from 'react'
 import DataContext from '../../context/data/dataContext'
-
+import Loading from '../alerts/Loading'
 const DopaForm = () => {
     const dataContext = useContext(DataContext)
     const {lol, loading, title, getLol} = dataContext
@@ -36,7 +36,7 @@ const DopaForm = () => {
             <div className="row">
             <table className="table table-responsive-sm col">
                 <tbody>
-                    {Object.keys(lol).length < 1 ? <td></td>: stuff.map(key => (
+                    {Object.keys(lol).length < 1 ? "" : loading ? <Loading/> : stuff.map(key => (
                         <tr>
                             <td>{key}</td>
                             <td>{lol[key].toString()}</td>
