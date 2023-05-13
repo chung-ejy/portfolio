@@ -1,4 +1,4 @@
-import { GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
+import { GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
        SET_ERROR, CLEAR_ERROR, STOP_LOADING} from "./types";
 
 const main_reducer = (state,action) => {
@@ -49,6 +49,12 @@ const main_reducer = (state,action) => {
                     song:action.payload,
                     loading:false
                 }
+        case GET_NEWS:
+            return {
+                ...state,
+                news:action.payload,
+                loading:false
+            }
     }
 }
 

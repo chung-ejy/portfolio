@@ -1,29 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import LongshotDesc from './LongshotDesc'
 import CometDesc from './CometDesc'
 import ShuffleDesc from './ShuffleDesc'
-import PriceForm from './PriceForm'
-import ShuffleForm from './ShuffleForm'
 import DataContext from '../../context/data/dataContext';
+import FakerDesc from './FakerDesc'
 
 const Projects = () => {
     const dataContext = useContext(DataContext);
-    const projects = ["Longshot","Comet","Shuffle"]
-    const { price,song, title, setTitle} = dataContext
-    // const [state,setState] = useState("prototype")
+    const { title, setTitle } = dataContext
     const onButtonClick = (e) => {
       e.preventDefault();
       setTitle(e.target.name);
+      console.log(title)
     };
 
-    // const onModeClick = (e) => {
-    //   if (state === "description") {
-    //     setState("prototype")
-    //   } else {
-    //     setState("description")
-    //   }
-      
-    // }
+    useEffect(() => {
+
+    }, [title]);
+
     return (
       <div className="card card-body mt-4 mb-4 bg-transparent">
         <h1 className="text-primary text-left">Projects</h1>
@@ -48,34 +42,25 @@ const Projects = () => {
           >
             <i className={`fas fa-xl fa-music text-${title=="Shuffle" ? "light" : "primary"}`}></i>
           </button>
+          <button
+            name="Faker"
+            className={`col btn btn-${title=="Faker" ? "primary" : "secondary"} btn-xl m-2`}
+            onClick={onButtonClick}
+          >
+            <i className={`fas fa-xl fa-rss text-${title=="Faker" ? "light" : "primary"}`}></i>
+          </button>
         </div>
         <div className="row h-5">
-          {/* {state == "description" ?  */}
-          {/* <div className="col">
-          {title === "Shuffle" ? (
-            <ShuffleForm />
-          ) : (
-            <PriceForm /> // Update this line
-          )}
-          </div>   */}
           <div className="col">
             {title === "Longshot" ? (
               <LongshotDesc />
             ) : title === "Comet" ? (
               <CometDesc />
-            ) : (
+            ) : title === "Shuffle" ?(
               <ShuffleDesc />
-            )}
+            ) : <FakerDesc />}
           </div>
-          {/* } */}
         </div>
-        {/* <button
-            name={state}
-            className={`row btn btn-outline-info btn-sm m-3`}
-            onClick={onModeClick}
-          >
-            {state}
-          </button> */}
       </div>
     );
   };

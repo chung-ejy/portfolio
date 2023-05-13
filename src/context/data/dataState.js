@@ -5,7 +5,8 @@ import {
         SET_TITLE,
         CLEAR_ERROR,
         GET_PRICE,
-        GET_SONG
+        GET_SONG,
+        GET_NEWS
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -18,6 +19,7 @@ const DataState = props => {
         title: "Longshot",
         price:{},
         song:{},
+        news:{},
         error:null,
         loading:false
     }
@@ -85,6 +87,21 @@ const DataState = props => {
         }
       };
 
+      const getNews = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api`, { params: data });
+          console.log(response.data)
+          dispatch({
+            type: GET_NEWS,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
     
 
     return (
@@ -95,6 +112,8 @@ const DataState = props => {
             text:state.text,
             price:state.price,
             song:state.song,
+            news:state.news,
+            getNews,
             getPrice,
             getSong,
             setTitle,
