@@ -3,19 +3,19 @@ import DataContext from '../../context/data/dataContext';
 import Loading from '../alerts/Loading';
 
 const ShuffleForm = () => {
+  const dataContext = useContext(DataContext);
+  const { loading, song, getSong, title } = dataContext;
   const [state, setState] = useState({
     artist_name: '',
     track_name: '',
+    project:title
   });
-
-  const dataContext = useContext(DataContext);
-  const { loading, song, getSong } = dataContext;
-
   useEffect(() => {
     if (Object.keys(song).length > 0) {
       setState(prevState => ({
         artist_name: '',
-        track_name: ''
+        track_name: '',
+        project:title
       }));
     }
   }, [song,loading]);
