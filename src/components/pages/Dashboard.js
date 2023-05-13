@@ -1,7 +1,6 @@
 import React from 'react';
 import Profile from "../data/Profile"
 import Projects from '../data/Projects';
-import Loading from '../alerts/Loading';
 const Dashboard = () => {
     return (
     <div className="container">
