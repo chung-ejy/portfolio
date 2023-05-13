@@ -34,16 +34,17 @@ const DopaForm = () => {
     return (
         <div className="card card-body mt-4 mb-4">
             <div className="row">
+            {Object.keys(lol).length < 1 ? "" : loading ? <Loading/> :
             <table className="table table-responsive-sm col">
                 <tbody>
-                    {Object.keys(lol).length < 1 ? "" : loading ? <Loading/> : stuff.map(key => (
+                     {stuff.map(key => (
                         <tr>
                             <td>{key}</td>
                             <td>{lol[key].toString()}</td>
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table>}
                 <form className="col"onSubmit={onSubmit}>
                     {Object.keys(state).map(key =>( key !== "project" ? 
                         <div class="form-check form-switch content-center" key={key} name={key}>
