@@ -5,8 +5,8 @@ const FakerDesc = () => {
     const tagline = "Fake News Classifier"
     const dates = "July 2021 - August 2021"
     const projectLink = "https://github.com/chung-ejy/faker"
-    const description = "Description: Fake news classifier"
-    const tooltips = "Usage: Type a news article to see if its fake or not lmao based off kaggle data set that can be"
+    const description = "Description: Fake news classifier based off kaggle data set that can be"
+    const tooltips = "Usage: Type a news article to see if its fake or not lmao "
     const disclaimer = "Disclaimer: This model has 73% chance to work everytime ..."
     return(<div className="card cardbody bg-transparent p-2">
     <h1 className="cardtitle text-primary text-center">{title}</h1>
