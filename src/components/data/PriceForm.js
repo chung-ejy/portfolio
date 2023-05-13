@@ -56,7 +56,6 @@ const onFileChange = (e) => {
     // Update the form state with the parsed data
     setState({ ...state, ...stateObject });
   };
-
   reader.readAsText(file);
 };
 
@@ -84,11 +83,10 @@ const onFileChange = (e) => {
                         }
         <form onSubmit={onSubmit}>
           <div className="form-group">
-            <input className="form-control" type="file" id="formFile" />
+            <input onChange={onFileChange} className="form-control" type="file" id="formFile" />
           </div>
           <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form>
-
       </div>
     </div>
   );
