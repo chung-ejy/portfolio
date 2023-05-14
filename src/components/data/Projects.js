@@ -24,14 +24,14 @@ const Projects = () => {
                       "Dopa":"fas fa-xl fa-laugh-squint"
                     }
     return (
-      <div className="card card-body mt-4 mb-4 bg-transparent">
+      <div className="card card-body mt-4 mb-4 bg-light">
         <h1 className="cardtitle text-primary text-center">Projects</h1>
         <div className="row h-5 m-1">
           {Object.keys(projects).map(x => (
             <button            
             name={x}
             key={x}
-            className={`col btn btn-${title===x ? "primary" : "secondary"} btn-xl m-2`}
+            className={`col btn btn-${title===x ? "primary" : "light"} btn-xl m-2`}
             onClick={onButtonClick}>
               <i className={`${projects[x]} text-${title===x ? "light" : "primary"}`}></i>
             </button>

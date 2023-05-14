@@ -8,7 +8,7 @@ const FakerDesc = () => {
     const description = "Description: Fake news classifier based off kaggle data set that can be"
     const tooltips = "Usage: Type a news article to see if its fake or not lmao "
     const disclaimer = "Disclaimer: This model has 73% chance to work everytime ..."
-    return(<div className="card cardbody bg-transparent p-2">
+    return(<div className="card cardbody bg-light p-2">
     <h1 className="cardtitle text-primary text-center">{title}</h1>
     <h3 className="text-center">{tagline}</h3>
     <table className="table table-responsive-sm text-center">

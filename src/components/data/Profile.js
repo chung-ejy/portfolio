@@ -13,7 +13,7 @@ const Profile = () => {
     }
   }
   return (
-    <div className="card card-body md-10 mt-5 mb-3 text-center bg-transparent">
+    <div className="card card-body md-10 mt-5 mb-3 text-center bg-light">
         <div className="row">
         <div className="col">
         <h1 className="text-primary">Eric Chung</h1>

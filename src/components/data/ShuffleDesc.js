@@ -8,7 +8,7 @@ const ShuffleDesc = () => {
     const description = "Description: Song recommendations based off Spotify playlist dataset that can be found"
     const tooltips = "Usage: Type a track name alongside the artist. Note: Limited dataset, think 2010s pop .."
     const disclaimer = "Disclaimer: This project is not an official Spotify product."
-    return(<div className="card cardbody bg-transparent p-2">
+    return(<div className="card cardbody bg-light p-2">
     <h1 className="cardtitle text-primary text-center">{title}</h1>
     <h3 className="text-center">{tagline}</h3>
     <table className="table table-responsive-sm text-center">

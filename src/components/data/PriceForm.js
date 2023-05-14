@@ -66,7 +66,7 @@ const onFileChange = (e) => {
   
 
   return (loading ? <Loading /> :
-    <div className="card bg-transparent">
+    <div className="card bg-light">
       <div className="card-body text-center">
         <h6>CSV File Example</h6>
         <table className="table table-bordered table-responsive">

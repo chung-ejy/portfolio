@@ -16,7 +16,7 @@ const Header = () => {
 }
 
 const style = {
-  height: "50vh",
+  height: "30vh",
   // minHeight: "500px",
   backgroundImage: `url(${background})`,
   backgroundSize: "cover",
