@@ -40,7 +40,7 @@ const DopaForm = () => {
                      {stuff.map(key => (
                         <tr>
                             <td>{key}</td>
-                            <td>{lol[key].toString()}</td>
+                            <td>{String(lol[key])}</td>
                         </tr>
                     ))}
                 </tbody>
