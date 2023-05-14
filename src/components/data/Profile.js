@@ -1,39 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import headshot from '../../assets/headshot.jpg'
+import Experience from './Experience';
+import Education from './Education';
+import ProfileCard from './ProfileCard';
 const Profile = () => {
+  const [state,setState] = useState("Experience")
+  const onChange = (e) => {
+    if(state==="Experience"){
+      setState("Education")
+    } else {
+      setState("Experience")
+    }
+  }
   return (
-    <div className="card card-body md-10 mt-4 mb-4 text-center bg-transparent">
-      <h1 className="cardtitle text-primary">Eric Chung</h1>
-      {/* <h1><i className="fas fa-user fa-xl text-primary"></i></h1> */}
-      <div className="row">
+    <div className="card card-body md-10 mt-5 mb-3 text-center bg-transparent">
+        <div className="row">
         <div className="col">
-          <img alt="myface" className="img-fluid" style={imageStyle} src={headshot}></img>
+        <h1 className="text-primary">Eric Chung</h1>
+          <ProfileCard />
         </div>
-      </div> 
-      <div className="row mt-3">
-        <h6>Machine Learning Developer / 
-        <a href="https://www.instagram.com/emiru.jpg/"><i className={`fas fa-egg fas-lg text-primary m-2`}></i></a>
-        / Gamer 
-        </h6>
-        <h6>chung.ejy@gmail.com</h6>
-      </div>
-      <div className="row">
-        <div className="col m-1">
-          <h3 className="">
-          <a href="https://github.com/chung-ejy"><i className={`fab fa-github fab-lg text-primary mt-3`}></i></a>
-          </h3>
+        <div className="col">
+          <div className="row"><button className="btn btn-outline-primary btn-block" onClick={onChange}>{state}</button></div>
+          <div className="row mt-2">{state === "Experience" ?  <Experience /> : <Education />}</div>
         </div>
-        <div className="col m-1">
-          <h3 className="">
-          <a href="https://www.linkedin.com/in/chung-ejy/"><i className={`fab fa-linkedin fab-lg text-primary mt-3`}></i></a>
-          </h3>
+        {/* <div className="row">
+          <div className="col"><Experience /></div>
+          <div className="col"><Education /></div>
+        </div> */}
         </div>
-        <div className="col m-1">
-          <h3 className="">
-          <a href="https://open.spotify.com/playlist/6qwHbTZBvcOC9fqPrzhpNI?si=7eeedbe18f2e4a2c"><i className={`fas fa-music fas-lg text-primary mt-3`}></i></a>
-          </h3>
-        </div>
-          </div>
+        {/* <div className="row mt-2"><div className="col"><Experience /></div></div>
+        <div className="row mt-2"><div className="col"><Education /></div></div> */}
         </div>
   );
 };
