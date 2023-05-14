@@ -5,8 +5,8 @@ const DopaDesc = () => {
     const tagline = "League of Legends Match Predictor"
     const dates = "July 2021 - August 2021"
     const projectLink = "https://github.com/chung-ejy/dopa"
-    const description = "Description: Predict league matches based on first objectives"
-    const tooltips = "Usage: side on means the match is held in grandmaster otherwise in master, side on is blue side"
+    const description = "Description: Predict league matches based on first objectives. Model trained from a dataset "
+    const tooltips = "Usage: Tier on means the match is held in grandmaster otherwise in master, side on is blue side"
     const disclaimer = "Disclaimer: This model has 83% chance to work everytime ... Not an official Riot product."
     return(<div className="card cardbody bg-transparent p-2">
     <h1 className="cardtitle text-primary text-center">{title}</h1>
