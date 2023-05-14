@@ -38,10 +38,12 @@ const ShuffleForm = () => {
       {/* <div className="card-header">
         <h3 className="card-title">Shuffle</h3>
       </div> */}
-      <div className="card-body">
+      <div className="card-body row">
+        <div className="col">
         {Object.keys(song).length < 1 || loading ? "" : <h1>{"Artist: " + song.artist_rec}</h1>}
         {Object.keys(song).length < 1 || loading ? "" : <h1>{"Song: " + song.track_rec}</h1>}
-        <form className="m-2" onSubmit={handleSubmit}>
+        </div>
+        <form className="col m-2" onSubmit={handleSubmit}>
           <div className="form-group m-2">
           <input
             type="text"
