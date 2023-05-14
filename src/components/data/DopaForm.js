@@ -30,33 +30,33 @@ const DopaForm = () => {
         getLol(state)
         setState({"FirstBlood":false,"FirstTower":false,"FirstBaron":false,"FirstDragon":false,"FirstInhibitor":false,"tier":"gm","side":"blue"})
     }
-    const stuff = ["prediction","tier","side"]
     return (
-        <div className="card card-body mt-4 mb-4">
+        <div className="card card-body text-center mt-4 mb-4">
             <div className="row">
-            {Object.keys(lol).length < 1 ? "" : loading ? <Loading/> :
-            <table className="table table-responsive-sm col">
-                <tbody>
-                     {stuff.map(key => (
-                        <tr>
-                            <td>{key}</td>
-                            <td>{String(lol[key])}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>}
-                <form className="col"onSubmit={onSubmit}>
+            <div className="col p-5">
+                {Object.keys(lol).length < 1 || loading ? "" : 
+                <h1 className={`text-${lol.prediction < 1 ? "danger":"success"}`}>
+                  {`${lol.prediction < 1 ? "Defeat":"Victory"}`}
+                </h1>
+                }
+                {Object.keys(lol).length < 1 || loading ? "" : 
+                <h1 className={`text-${lol.prediction < 1 ? "danger":"success"}`}>
+                  <i className={`${lol.prediction < 1 ? "fas fa-frown":"fas fa-smile"}`}></i>
+                </h1>
+                }
+                </div>
+                <form className="col" onSubmit={onSubmit}>
+                    <div className="form-group">
                     {Object.keys(state).map(key =>( key !== "project" ? 
-                        <div class="form-check form-switch content-center" key={key} name={key}>
+                        <div class="form-check form-switch" key={key} name={key}>
                         <input class="form-check-input" name={key} type="checkbox" onChange={onChange} id="flexSwitchCheckDefault" />
                         <label class="form-check-label" name={key} for="flexSwitchCheckDefault">{key}</label>
                     </div>:""))}
-                    <div className="form-group">
-                        <button type="submit" class="btn btn-primary form-control">Classify</button>
                     </div>
+                    <button type="submit" class="btn btn-primary btn-sm m-2">Classify</button>   
                 </form>
             </div>
-        </div>
+            </div>
     )
 }
 
