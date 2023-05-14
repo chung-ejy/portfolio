@@ -10,7 +10,7 @@ const LongshotDesc = () => {
     const tooltips = "Usage: Input a csv table with columns numbered 0 - 13. Note: model will only provide average predictions for the upcoming week."
     const disclaimer = "Disclaimer: For educational purposes only. The following domain is not liable for any investment decisions made by any party. Please consult an investment advisor."
     return(
-            <div className="card cardbody bg-transparent p-2">
+            <div className="card cardbody bg-light p-2">
                 <h1 className="cardtitle text-primary text-center">{title}</h1>
                 <h3 className="text-center">{tagline}</h3>
                 <table className="table table-responsive-sm text-center">

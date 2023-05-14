@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import headshot from '../../assets/headshot.jpg'
-
 const ProfileCard = () => {
   return (
-    <div className="card card-body text-center bg-transparent">
+    <div className="card card-body text-center bg-light">
       <div className="row">
         <div className="col align-item-center">
           <img alt="myface" className="img-fluid" style={imageStyle} src={headshot}></img>
@@ -27,7 +26,12 @@ const ProfileCard = () => {
         </div>
         <div className="col m-1">
           <h3 className="">
-          <a href="https://open.spotify.com/playlist/6qwHbTZBvcOC9fqPrzhpNI?si=7eeedbe18f2e4a2c"><i className={`fas fa-music fas-lg text-primary mt-3`}></i></a>
+          <a href="https://open.spotify.com/playlist/6qwHbTZBvcOC9fqPrzhpNI?si=7eeedbe18f2e4a2c"><i className={`fab fa-spotify fa-lg text-primary mt-3`}></i></a>
+          </h3>
+        </div>
+        <div className="col m-1">
+          <h3 className="">
+          <a download href="https://docs.google.com/document/d/1eWfu3qYeC-kIJQSZOCIT2ukohditIpfT1_2XkYAlj4Q/edit?usp=sharing"><i className={`fas fa-file fas-lg text-primary mt-3`}></i></a>
           </h3>
         </div>
           </div>
@@ -39,7 +43,7 @@ const ProfileCard = () => {
 
 const imageStyle = {
   display: "inline",
-  border:"solid 2px #2799F3",
+  border:"solid 2px grey",
   width:"auto",
   height:"200px",
   borderRadius:"50%"

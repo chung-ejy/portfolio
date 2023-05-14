@@ -1,7 +1,7 @@
 import React from 'react'
 const Education = () => {
     const title = "Education"
-    return(<div className="card cardbody bg-transparent p-2">
+    return(<div className="card cardbody bg-light p-2">
     {/* <h1 className="cardtitle text-primary text-center">{title}</h1> */}
     <table className="table table-responsive-sm text-center">
             <thead>
