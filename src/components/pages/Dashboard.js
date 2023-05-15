@@ -6,7 +6,7 @@ import background from '../../assets/bg2.png'
 const Dashboard = () => {
     return (
         <div style={style}>
-    <div className="container">
+        <div className="container">
         <div className="row">      
         <Profile />
         </div>            
