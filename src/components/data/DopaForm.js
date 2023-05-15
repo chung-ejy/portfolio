@@ -33,7 +33,7 @@ const DopaForm = () => {
     return (
         <div className="card card-body text-center mt-4 mb-4">
             <div className="row">
-            <div className="col p-5">
+            {loading ? <Loading /> :<div className="col p-5">
                 {Object.keys(lol).length < 1 || loading ? "" : 
                 <h1 className={`text-${lol.prediction < 1 ? "danger":"success"}`}>
                   {`${lol.prediction < 1 ? "Defeat":"Victory"}`}
@@ -44,7 +44,7 @@ const DopaForm = () => {
                   <i className={`${lol.prediction < 1 ? "fas fa-frown":"fas fa-smile"}`}></i>
                 </h1>
                 }
-                </div>
+                </div> }
                 <form className="col" onSubmit={onSubmit}>
                     <div className="form-group">
                     {Object.keys(state).map(key =>( key !== "project" ? 
