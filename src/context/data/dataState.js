@@ -79,7 +79,7 @@ const DataState = props => {
           setLoading();
         axios.post(`${base_url}/api/api`, data,{"headers": {
           'Content-Type': 'application/json',
-          'X-CSRFToken': Cookies.get('csrftoken'), 
+          'X-CSRFToken': getCookie('csrftoken'), 
         }}).then(res => {
                 dispatch({
                 type: GET_PRICE   ,
@@ -98,7 +98,7 @@ const DataState = props => {
           setLoading();
           const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
             'Content-Type': 'application/json',
-            'X-CSRFToken': Cookies.get('csrftoken'), 
+            'X-CSRFToken': getCookie('csrftoken'), 
           }});
           dispatch({
             type: GET_SONG,
@@ -115,7 +115,7 @@ const DataState = props => {
           setLoading();
           const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
             'Content-Type': 'application/json',
-            'X-CSRFToken': Cookies.get('csrftoken'), 
+            'X-CSRFToken': getCookie('csrftoken'), 
           }});
           dispatch({
             type: GET_NEWS,
@@ -132,7 +132,7 @@ const DataState = props => {
           setLoading();
           const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
             'Content-Type': 'application/json',
-            'X-CSRFToken': Cookies.get('csrftoken'), 
+            'X-CSRFToken': getCookie('csrftoken'), 
           }});
           dispatch({
             type: GET_LOL,
