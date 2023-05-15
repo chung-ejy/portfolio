@@ -1,7 +1,7 @@
 import React from 'react';
 import Profile from "../data/Profile"
 import Projects from '../data/Projects';
-import background from '../../assets/victoria-strukovskaya-OAlYImdG1IQ-unsplash.jpg'
+import background from '../../assets/bg2.png'
 const Dashboard = () => {
     return (
         <div style={style}>
