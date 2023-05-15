@@ -18,17 +18,17 @@ const Photos = () => {
     <div className="card card-body md-10 mb-3 text-center bg-light">
         <h1 className="cardtitle text-center text-primary">Photos</h1>
         <div className="row">
-            {[...Array(3).keys()].map(x =>(
+            {[...Array(1).keys()].map(x =>(
                 <div className="col mb-3">
                     <img alt="myface" className="img-fluid" style={imageStyle} src={pics.at(state+x)}></img>
-                    <h6>{pics.at(state+x).split(".")[0].split("/")[3]}</h6>
+                    <h6 className="mt-3">{pics.at(state+x).split(".")[0].split("/")[3]}</h6>
                 </div>
             ))}
         {/* <div className="col">
           <div className="row"><button className="btn btn-outline-primary btn-block" onClick={onChange}>{state}</button></div>
         </div> */}
         </div>
-        <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={4} step="1"></input>
+        <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={6} step="1"></input>
         </div>
   );
 };
