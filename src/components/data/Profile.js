@@ -21,7 +21,7 @@ const Profile = () => {
         </div>
         <div className="col">
           <div className="row"><button className="btn btn-outline-primary btn-block" onClick={onChange}>{state}</button></div>
-          <div className="row mt-2">{state === "Experience" ?  <Experience /> : <Education />}</div>
+          <div className="row mt-3">{state === "Experience" ?  <Experience /> : <Education />}</div>
         </div>
         {/* <div className="row">
           <div className="col"><Experience /></div>
