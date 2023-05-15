@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import headshot from '../../assets/headshot.jpg'
 import Experience from './Experience';
 import Education from './Education';
 import ProfileCard from './ProfileCard';
+
 const Profile = () => {
   const [state,setState] = useState("Experience")
   const onChange = (e) => {
@@ -13,7 +13,7 @@ const Profile = () => {
     }
   }
   return (
-    <div className="card card-body md-10 mb-3 text-center bg-light">
+    <div className="card card-body md-10 mb-3 mt-5 text-center bg-light">
         <div className="row">
         <div className="col">
         <h1 className="text-primary">Eric Chung</h1>
@@ -28,11 +28,4 @@ const Profile = () => {
   );
 };
 
-const imageStyle = {
-  display: "inline",
-  border:"solid 2px #2799F3",
-  width:"auto",
-  height:"200px",
-  borderRadius:"50%"
-}
 export default Profile;

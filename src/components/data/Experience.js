@@ -52,6 +52,17 @@ const Experience = () => {
                     May 2016 - July 2016
                 </td>
             </tr>
+            <tr>
+                <td className="d-none d-lg-table-cell text-light">
+                    Korea Financial
+                </td>
+                <td className="d-none d-lg-table-cell text-light">
+                    Intern
+                </td>
+                <td className="d-none d-lg-table-cell text-light">
+                    May 2016
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>)
