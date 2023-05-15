@@ -32,7 +32,7 @@ const Education = () => {
             </tr>
             <tr>
                 <td className="d-none d-lg-table-cell">
-                    Lycee International Xavier
+                    Lycée International Xavier
                 </td>
                 <td className="d-none d-lg-table-cell">
                     Secondary Education
