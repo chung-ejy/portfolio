@@ -77,7 +77,10 @@ const DataState = props => {
     const getPrice = (data) => {
         try {
           setLoading();
-        axios.post(`${base_url}/api/api`, data).then(res => {
+        axios.post(`${base_url}/api/api`, data,{"headers": {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': Cookies.get('csrftoken'), 
+        }}).then(res => {
                 dispatch({
                 type: GET_PRICE   ,
                 payload: res.data
@@ -93,7 +96,10 @@ const DataState = props => {
     const getSong = async (data) => {
         try {
           setLoading();
-          const response = await axios.post(`${base_url}/api/api`, data);
+          const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken'), 
+          }});
           dispatch({
             type: GET_SONG,
             payload: response.data
@@ -107,7 +113,10 @@ const DataState = props => {
       const getNews = async (data) => {
         try {
           setLoading();
-          const response = await axios.post(`${base_url}/api/api`, data);
+          const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken'), 
+          }});
           dispatch({
             type: GET_NEWS,
             payload: response.data
@@ -121,7 +130,10 @@ const DataState = props => {
       const getLol = async (data) => {
         try {
           setLoading();
-          const response = await axios.post(`${base_url}/api/api`, data);
+          const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': Cookies.get('csrftoken'), 
+          }});
           dispatch({
             type: GET_LOL,
             payload: response.data
