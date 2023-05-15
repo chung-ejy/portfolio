@@ -13,7 +13,7 @@ const Profile = () => {
     }
   }
   return (
-    <div className="card card-body md-10 mt-5 mb-3 text-center bg-light">
+    <div className="card card-body md-10 mb-3 text-center bg-light">
         <div className="row">
         <div className="col">
         <h1 className="text-primary">Eric Chung</h1>
@@ -23,14 +23,8 @@ const Profile = () => {
           <div className="row"><button className="btn btn-outline-primary btn-block" onClick={onChange}>{state}</button></div>
           <div className="row mt-3">{state === "Experience" ?  <Experience /> : <Education />}</div>
         </div>
-        {/* <div className="row">
-          <div className="col"><Experience /></div>
-          <div className="col"><Education /></div>
-        </div> */}
-        </div>
-        {/* <div className="row mt-2"><div className="col"><Experience /></div></div>
-        <div className="row mt-2"><div className="col"><Education /></div></div> */}
-        </div>
+      </div>
+    </div>
   );
 };
 
