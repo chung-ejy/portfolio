@@ -6,7 +6,7 @@ import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
 import DopaDesc from './DopaDesc';
 
-const Projects = () => {
+const ProjectsDash = () => {
     const dataContext = useContext(DataContext);
     const { title, setTitle } = dataContext
     const onButtonClick = (e) => {
@@ -54,4 +54,4 @@ const Projects = () => {
   };
   
 
-export default Projects
+export default ProjectsDash

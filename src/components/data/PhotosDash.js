@@ -7,7 +7,7 @@ import island from '../../assets/island.jpg'
 import forest from '../../assets/forest.jpg'
 import desk from '../../assets/desk.jpg'
 
-const Photos = () => {
+const PhotosDash = () => {
   const [state,setState] = useState(0)
   const pics = [bseaport,the_hyundai,boat,island,forest,desk,newyork]
   const onRangeChange = (e) => {
@@ -52,4 +52,4 @@ const imageStyle = {
   height:"200px",
   borderRadius:"10%"
 }
-export default Photos;
+export default PhotosDash;
