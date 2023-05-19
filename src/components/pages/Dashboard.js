@@ -3,6 +3,7 @@ import Profile from "../data/Profile"
 import Projects from '../data/Projects';
 import Photos from '../data/Photos';
 import background from '../../assets/bg2.png'
+import FeedbackForm from '../data/FeedbackForm';
 const Dashboard = () => {
     return (
         <div style={style}>
@@ -12,6 +13,9 @@ const Dashboard = () => {
         </div>            
         <div className="row">
             <Projects />
+        </div>
+        <div className="row">
+            <FeedbackForm />
         </div>
         <div className="row">
             <Photos />

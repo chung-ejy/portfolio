@@ -1,4 +1,4 @@
-import { GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
+import { POST_FEEDBACK, GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
        SET_ERROR, CLEAR_ERROR, STOP_LOADING} from "./types";
 
 const main_reducer = (state,action) => {
@@ -61,6 +61,12 @@ const main_reducer = (state,action) => {
                 lol:action.payload,
                 loading:false
             }
+        case POST_FEEDBACK:
+                return {
+                    ...state,
+                    feedback:action.payload,
+                    loading:false
+                }
     }
 }
 
