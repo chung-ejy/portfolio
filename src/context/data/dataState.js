@@ -7,7 +7,8 @@ import {
         GET_PRICE,
         GET_SONG,
         GET_NEWS,
-        GET_LOL
+        GET_LOL,
+        POST_FEEDBACK
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -22,6 +23,7 @@ const DataState = props => {
         song:{},
         news:{},
         lol:{},
+        feedback:{},
         error:null,
         loading:false
     }
@@ -132,6 +134,20 @@ const DataState = props => {
         }
       };
 
+      const postFeedback = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.post(`${base_url}/api/api`, data);
+          dispatch({
+            type: POST_FEEDBACK,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
     
 
     return (
@@ -144,6 +160,8 @@ const DataState = props => {
             song:state.song,
             news:state.news,
             lol:state.lol,
+            feedback:state.feedback,
+            postFeedback,
             getLol,
             getNews,
             getPrice,

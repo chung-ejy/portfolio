@@ -26,12 +26,18 @@ const Photos = () => {
             ))}
         </div>
         <div className="row">
-            {[...Array(4).keys()].map(x =>(
+            {[...Array(3).keys()].map(x =>(
                 <div className="col mb-3">
                     <img alt="myface" className="img-fluid" style={imageStyle} src={pics.at(state+x+3)}></img>
                     <h6 className="mt-3">{pics.at(state+x+3).split(".")[0].split("/")[3]}</h6>
                 </div>
             ))}
+        </div>
+        <div className="row">
+          <div className="col mb-3">
+              <img alt="myface" className="img-fluid" style={imageStyle} src={pics.at(6)}></img>
+              <h6 className="mt-3">{pics.at(6).split(".")[0].split("/")[3]}</h6>
+          </div>
         </div>
         {/* <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={6} step="1"></input> */}
         </div>

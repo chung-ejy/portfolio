@@ -18,7 +18,7 @@ const Header = () =>{
         return (
             <nav class="navbar navbar-expand-lg item-center navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand mx-auto" href="#">N</a>
+                    <a class="navbar-brand mx-auto" href="#"></a>
                 </div>
             </nav>
         )
