@@ -16,6 +16,7 @@ const BlogDash = () => {
   return (
     <div className="card card-body md-10 mb-3 bg-light">
         <h1 className="cardtitle text-center text-primary">Blog</h1>
+        <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={6} step="1"></input>
             {blogs.map(x =>(
                 <div className="row">
                     <div className="card cardbody bg-light p-2">
@@ -27,7 +28,7 @@ const BlogDash = () => {
                 </div>
                 </div>
             ))}
-        <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={6} step="1"></input>
+        
         </div>
   );
 };

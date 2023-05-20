@@ -7,9 +7,8 @@ const ProfileCard = () => {
         <div className="col align-item-center">
           <img alt="myface" className="img-fluid" style={imageStyle} src={headshot}></img>
           <div className="row mt-3">
-        <h6>Machine Learning Developer / 
-        <a href="https://www.instagram.com/emiru.jpg/"><i className={`fas fa-egg fas-lg text-primary m-2`}></i></a>
-        / Gamer 
+        <h6>Machine Learning Developer / Gamer 
+        {/* <a href="https://www.instagram.com/emiru.jpg/"><i className={`fas fa-egg fas-lg text-primary m-2`}></i></a> */}
         </h6>
         <h6>chung.ejy@gmail.com</h6>
       </div>
