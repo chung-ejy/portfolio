@@ -5,7 +5,7 @@ import ShuffleDesc from './ShuffleDesc'
 import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
 import DopaDesc from './DopaDesc';
-
+import FeedbackForm from './FeedbackForm'
 const ProjectsDash = () => {
     const dataContext = useContext(DataContext);
     const { title, setTitle } = dataContext
@@ -48,6 +48,9 @@ const ProjectsDash = () => {
             ) : title === "Faker" ? <FakerDesc />
             : <DopaDesc />}
           </div>
+        </div>
+        <div className="row h-5">
+          <FeedbackForm />
         </div>
       </div>
     );
