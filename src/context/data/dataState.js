@@ -8,6 +8,7 @@ import {
         GET_SONG,
         GET_NEWS,
         GET_LOL,
+        GET_BLOGS,
         POST_FEEDBACK
     } from "./types";
 
@@ -23,6 +24,7 @@ const DataState = props => {
         song:{},
         news:{},
         lol:{},
+        blogs:[],
         feedback:{},
         error:null,
         loading:false
@@ -160,6 +162,20 @@ const DataState = props => {
         }
       };
 
+      const getBlogs = async () => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api`);
+          dispatch({
+            type: GET_BLOGS,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
     
 
     return (
@@ -173,6 +189,8 @@ const DataState = props => {
             news:state.news,
             lol:state.lol,
             feedback:state.feedback,
+            blogs:state.blogs,
+            getBlogs,
             postFeedback,
             getLol,
             getNews,

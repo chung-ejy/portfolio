@@ -5,8 +5,8 @@ import ShuffleDesc from './ShuffleDesc'
 import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
 import DopaDesc from './DopaDesc';
-
-const Projects = () => {
+import FeedbackForm from './FeedbackForm'
+const ProjectsDash = () => {
     const dataContext = useContext(DataContext);
     const { title, setTitle } = dataContext
     const onButtonClick = (e) => {
@@ -49,9 +49,12 @@ const Projects = () => {
             : <DopaDesc />}
           </div>
         </div>
+        <div className="row h-5">
+          <FeedbackForm />
+        </div>
       </div>
     );
   };
   
 
-export default Projects
+export default ProjectsDash

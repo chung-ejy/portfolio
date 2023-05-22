@@ -38,7 +38,7 @@ const FeedbackForm = () => {
 
   return (loading ? <Loading />
 :
-    <div className="card text-center mb-3">
+    <div className="card bg-light mt-3 text-center mb-3">
       <div className="card-body">
             <h1 className={`text-primary"}`}>
                 Feedback

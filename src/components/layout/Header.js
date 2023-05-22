@@ -1,24 +1,25 @@
-import React from 'react'
-// import background from "../../assets/background.jpg";
-// const Header = () => {
-//         return (      
-//           <header style={style}>
-//             <div className="container h-100">
-//               <div className="row h-100 align-items-center">
-//                 <div className="col-12 text-center">
-//                   {/* <h1 className="fw-light text-dark">Interesting Tag Line</h1> */}
-//                   {/* <p className="lead">A great starter layout for a landing page</p> */}
-//                 </div>
-//               </div>
-//             </div>
-//           </header>
-//         );
-
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 const Header = () =>{
-        return (
-            <nav class="navbar navbar-expand-lg item-center navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand mx-auto" href="#"></a>
+    const [state,setState] = useState(true)
+    const onClick = (e) =>{
+        e.preventDefault()
+        setState(!state)
+    }
+    const navItems = (
+    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    {/* <li className="nav-item"><Link to="/"><a className="nav-link" href="/">Portfolio</a></Link></li> */}
+    <li className="nav-item"><Link to="/projects"><a className="nav-link" href="/">Projects</a></Link></li>
+    <li className="nav-item"><Link to="/photos"><a className="nav-link" href="/">Photos</a></Link></li>
+    <li className="nav-item"><Link to="/blog"><a className="nav-link" href="/">Blog</a></Link></li>
+    </ul>
+    )    
+    return (
+            <nav className="navbar navbar-expand-lg bg-primary">
+                <div className="container-fluid">
+                <a className="navbar-brand" href="/">Portfolio</a>
+                {navItems}
+
                 </div>
             </nav>
         )
@@ -26,8 +27,6 @@ const Header = () =>{
 
 const style = {
   height: "30vh",
-  // minHeight: "500px",
-  // backgroundImage: `url(${background})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",

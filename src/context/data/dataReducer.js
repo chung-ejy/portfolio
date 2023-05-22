@@ -1,4 +1,4 @@
-import { POST_FEEDBACK, GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
+import { GET_BLOGS, POST_FEEDBACK, GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
        SET_ERROR, CLEAR_ERROR, STOP_LOADING} from "./types";
 
 const main_reducer = (state,action) => {
@@ -67,6 +67,12 @@ const main_reducer = (state,action) => {
                     feedback:action.payload,
                     loading:false
                 }
+        case GET_BLOGS:
+            return {
+                ...state,
+                blogs:action.payload.blogs,
+                loading:false
+            }
     }
 }
 
