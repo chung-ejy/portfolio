@@ -3,7 +3,7 @@ import DataContext from '../../context/data/dataContext';
 
 const BlogDash = () => {
     const dataContext = useContext(DataContext);
-    const { title, blogs, getBlogs,loading } = dataContext
+    const { title, blogs, getBlogs } = dataContext
     const [state,setState] = useState(0)
     useEffect(() => {
         getBlogs()
@@ -16,7 +16,7 @@ const BlogDash = () => {
   return (
     <div className="card card-body md-10 mb-3 bg-light">
         <h1 className="cardtitle text-center text-primary">Blog</h1>
-        <input onChange={onRangeChange} type="range" class="form-range"  min="0" max={6} step="1"></input>
+        <input onChange={onRangeChange} type="range" className="form-range"  min={state} max={state+3} step="1"></input>
             {blogs.map(x =>(
                 <div className="row">
                     <div className="card cardbody bg-light p-2">
@@ -33,12 +33,4 @@ const BlogDash = () => {
   );
 };
 
-const imageStyle = {
-  display: "inline",
-//   border:"solid 1px #78C2BE",
-  border:"solid 1px grey",
-  width:"auto",
-  height:"200px",
-  borderRadius:"10%"
-}
 export default BlogDash;

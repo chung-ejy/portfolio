@@ -9,9 +9,9 @@ const Header = () =>{
     const navItems = (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
     {/* <li className="nav-item"><Link to="/"><a className="nav-link" href="/">Portfolio</a></Link></li> */}
-    <li className="nav-item"><Link to="/projects"><a className="nav-link text-light" href="/">Projects</a></Link></li>
-    <li className="nav-item"><Link to="/photos"><a className="nav-link text-light" href="/">Photos</a></Link></li>
-    <li className="nav-item"><Link to="/blog"><a className="nav-link text-light" href="/">Blog</a></Link></li>
+    <li className="nav-item"><Link to="/projects"><h3 className="nav-link text-light" href="/">Projects</h3></Link></li>
+    <li className="nav-item"><Link to="/photos"><h3 className="nav-link text-light" href="/">Photos</h3></Link></li>
+    <li className="nav-item"><Link to="/blog"><h3 className="nav-link text-light" href="/">Blog</h3></Link></li>
     </ul>
     )    
     return (

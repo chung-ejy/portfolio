@@ -71,10 +71,10 @@ const onFileChange = (e) => {
         <h6>CSV File Example</h6>
         <table className="table table-bordered table-responsive">
           <thead className="thead-dark">
-            <tr>{tableheads.map((x) => <th>{String(x)}</th>)}</tr>
+            <tr>{tableheads.map((x) => <th key={x+title}>{String(x)}</th>)}</tr>
           </thead>
           <tbody>
-            <tr>{tablevals.map((x) => <td>{String(x)}</td>)}</tr>
+            <tr>{tablevals.map((x) => <td key={x+title+"_value"}>{String(x)}</td>)}</tr>
           </tbody>
         </table>
         {Object.keys(price).length < 1 || loading ? 
