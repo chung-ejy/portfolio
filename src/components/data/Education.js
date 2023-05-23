@@ -5,7 +5,7 @@ const Education = () => {
     {/* <h1 className="cardtitle text-primary text-center">{title}</h1> */}
     <table className="table table-responsive-sm text-center">
             <thead>
-                <tr><th>School</th><th className="d-none d-lg">Degree</th><th>Dates</th></tr>
+                <tr><th>School</th><th className="d-none d-lg-table-cell">Degree</th><th>Dates</th></tr>
             </thead>
             <tbody>
             <tr>

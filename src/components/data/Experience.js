@@ -5,7 +5,7 @@ const Experience = () => {
     {/* <h1 className="cardtitle text-primary text-center">{title}</h1> */}
     <table className="table table-responsive-sm text-left">
             <thead>
-                <tr><th>Firm</th><th className="d-none d-lg">Position</th><th>Dates</th></tr>
+                <tr><th>Firm</th><th className="d-none d-lg-table-cell">Position</th><th>Dates</th></tr>
             </thead>
             <tbody>
             <tr>
