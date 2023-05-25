@@ -16,14 +16,14 @@ const BlogDash = () => {
   return (
     <div className="card card-body md-10 mb-3 bg-light">
         <h1 className="cardtitle text-center text-primary">Blog</h1>
-        <input onChange={onRangeChange} type="range" className="form-range"  min={state} max={state+3} step="1"></input>
-            {blogs.map(x =>(
+        <input onChange={onRangeChange} type="range" className="form-range mb-2"  min={0} max={blogs.length-3} step="1"></input>
+            {blogs.length < 1 ? "" : [...Array(3).keys()].map(x =>(
                 <div className="row">
                     <div className="card cardbody bg-light p-2">
-                    <h1 className="cardtitle text-primary text-left">{x.title}</h1>
-                    <h3 className="text-secondary">{x.date}</h3>
+                    <h1 className="cardtitle text-primary text-left">{blogs.at(x+state).title}</h1>
+                    <h3 className="text-secondary">{blogs.at(x+state).date}</h3>
                     <p className="m-2">
-                        {x.text}
+                        {blogs.at(x+state).text}
                     </p>
                 </div>
                 </div>

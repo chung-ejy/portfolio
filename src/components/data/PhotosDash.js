@@ -19,7 +19,7 @@ const PhotosDash = () => {
         <h1 className="cardtitle text-center text-primary">Photos</h1>
             {[...Array(7).keys()].map(x =>(
                       <div className="row">
-                <div className="col mb-3">
+                <div className="col">
                     <img alt="myface" className="img-fluid" style={imageStyle} src={pics.at(x)}></img>
                     <h6 className="mt-3">{pics.at(state+x).split(".")[0].split("/")[3]}</h6>
                 </div>
@@ -36,7 +36,7 @@ const imageStyle = {
 //   border:"solid 1px #78C2BE",
   border:"solid 1px grey",
   width:"auto",
-  height:"75%",
+  height:"300px",
   borderRadius:"10%"
 }
 export default PhotosDash;
