@@ -8,7 +8,7 @@ const Education = () => {
                 <tr><th>School</th><th className="d-none d-lg-table-cell">Degree</th><th>Dates</th></tr>
             </thead>
             <tbody>
-            <tr>
+            {/* <tr>
                 <td className="d-lg-table-cell">
                     Northeastern University
                 </td>
@@ -18,7 +18,7 @@ const Education = () => {
                 <td className="d-lg-table-cell">
                     September 2015 - May 2020
                 </td>
-            </tr>
+            </tr> */}
             <tr>
                 <td className="d-lg-table-cell">
                     Yongsan International School of Seoul
