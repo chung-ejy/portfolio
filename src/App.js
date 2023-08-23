@@ -17,7 +17,7 @@ export const App = () => {
                         <Route exact path ="/" element={<Profile />} />
                         <Route exact path ="/photos" element={<Photos />} />
                         <Route exact path ="/projects" element={<Projects />} />
-                        <Route exact path ="/blog" element={<Blog />} />
+                        {/* <Route exact path ="/blog" element={<Blog />} /> */}
                     </Routes>
                 </Router>
             </DataState>
