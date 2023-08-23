@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import newyork from '../../assets/new_york.jpg'
-import bseaport from '../../assets/boston_seaport.jpg'
-import the_hyundai from '../../assets/the_hyundai.jpg'
-import boat from '../../assets/boat.jpg'
-import island from '../../assets/island.jpg'
-import forest from '../../assets/forest.jpg'
-import desk from '../../assets/desk.jpg'
+import newyork from '../../assets/travels/new_york.jpg'
+import bseaport from '../../assets/travels/boston_seaport.jpg'
+import the_hyundai from '../../assets/travels/the_hyundai.jpg'
+import boat from '../../assets/travels/boat.jpg'
+import island from '../../assets/travels/island.jpg'
+import forest from '../../assets/travels/forest.jpg'
+import desk from '../../assets/travels/desk.jpg'
 
 const PhotosDash = () => {
   const [state,setState] = useState(0)
