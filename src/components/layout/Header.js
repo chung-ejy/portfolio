@@ -11,7 +11,7 @@ const Header = () =>{
     {/* <li className="nav-item"><Link to="/"><a className="nav-link" href="/">Portfolio</a></Link></li> */}
     <li className="nav-item"><Link to="/projects"><h3 className="nav-link text-light" href="/">Projects</h3></Link></li>
     <li className="nav-item"><Link to="/photos"><h3 className="nav-link text-light" href="/">Photos</h3></Link></li>
-    {/* <li className="nav-item"><Link to="/blog"><h3 className="nav-link text-light" href="/">Blog</h3></Link></li> */}
+    <li className="nav-item"><Link to="/services"><h3 className="nav-link text-light" href="/">Services</h3></Link></li>
     </ul>
     )    
     return (

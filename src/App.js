@@ -5,8 +5,9 @@ import Header from "./components/layout/Header"
 import Profile from "./components/pages/Profile"
 import Photos from './components/pages/Photos'
 import Projects from './components/pages/Projects'
-import Blog from './components/pages/Blog.js'
+// import Blog from './components/pages/Blog.js'
 import background from './assets/bg2.png'
+import FullStackServices from './components/pages/FullStackServices'
 export const App = () => {
         return (
             <div style={style}>
@@ -17,7 +18,7 @@ export const App = () => {
                         <Route exact path ="/" element={<Profile />} />
                         <Route exact path ="/photos" element={<Photos />} />
                         <Route exact path ="/projects" element={<Projects />} />
-                        {/* <Route exact path ="/blog" element={<Blog />} /> */}
+                        <Route exact path ="/services" element={<FullStackServices />} />
                     </Routes>
                 </Router>
             </DataState>
