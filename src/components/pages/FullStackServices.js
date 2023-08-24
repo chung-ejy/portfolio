@@ -3,11 +3,13 @@ const FullStackServices = () => {
   return (
     <div className="container card card-body text-center bg-light">
         <div className="card card-body mt-2">
-        <h1>Full Stack Web App Services</h1>
+        <h1 className="text-primary">Full Stack Web App Services</h1>
+        <h2 className="text-secondary">Calling all ideas. </h2>
+        <h3 className="text-secondary">Come to life with these product offerings</h3>
         <div className="row mt-2">
         <div className="col card m-1 align-item-center">    
         <h3 className="mt-3">Proof of Concept</h3>
-
+        <h1 className="text-center"><i className={`fas fas-xl fa-seedling text-primary`}></i></h1>
             <table className="table table-responsive-sm text-center">
 
                 <thead>
@@ -23,9 +25,9 @@ const FullStackServices = () => {
             the project samples that are provided in the projects tab.
             </p>
         </div>
-        <div className="col card m-1 align-item-center">    
+        <div className="col card m-1 align-item-center"> 
         <h3 className="mt-3">Minimum Viable Product</h3>
-
+            <h1 className="text-center"><i className={`fas fas-xl fa-tree text-primary`}></i></h1>
             <table className="table table-responsive-sm text-center">
                 <thead>
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
