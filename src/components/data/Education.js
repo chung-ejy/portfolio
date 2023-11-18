@@ -19,28 +19,6 @@ const Education = () => {
                     September 2013 - January 2020
                 </td>
             </tr>
-            <tr>
-                <td className="d-lg-table-cell">
-                    Yongsan International School of Seoul
-                </td>
-                <td className="d-none d-lg-table-cell">
-                    High School Diploma
-                </td>
-                <td className="d-lg-table-cell">
-                    September 2008 - May 2013
-                </td>
-            </tr>
-            <tr>
-                <td className="d-lg-table-cell">
-                    Lycée International Xavier
-                </td>
-                <td className="d-none d-lg-table-cell">
-                    Secondary Education
-                </td>
-                <td className="d-lg-table-cell">
-                    October 2007 - May 2008
-                </td>
-            </tr>
         </tbody>
     </table>
 </div>)
