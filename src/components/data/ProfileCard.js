@@ -28,11 +28,11 @@ const ProfileCard = () => {
           <a href="https://open.spotify.com/playlist/6qwHbTZBvcOC9fqPrzhpNI?si=7eeedbe18f2e4a2c"><i className={`fab fa-spotify fa-lg text-primary mt-3`}></i></a>
           </h3>
         </div>
-        {/* <div className="col m-1">
+        <div className="col m-1">
           <h3 className="">
-          <a download href="https://docs.google.com/document/d/1eWfu3qYeC-kIJQSZOCIT2ukohditIpfT1_2XkYAlj4Q/edit?usp=sharing"><i className={`fas fa-file fas-lg text-primary mt-3`}></i></a>
+          <a download href="https://docs.google.com/document/d/10PY7uE2IQLFX5FeCoPnUnKHaJEI7Ee49Qh41p_uX8PM/edit?usp=sharing"><i className={`fas fa-file fas-lg text-primary mt-3`}></i></a>
           </h3>
-        </div> */}
+        </div>
           </div>
         </div>
       </div> 
