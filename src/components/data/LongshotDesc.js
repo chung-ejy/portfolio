@@ -4,7 +4,7 @@ import PriceForm from './PriceForm'
 const LongshotDesc = () => {
     const title = "Sapling"
     const tagline = "Stock Price Predictor"
-    const dates = "January 2020 - Present"
+    const dates = "January 2020 - December 2025"
     const projectLink = "https://github.com/chung-ejy/sapling"
     const description = "Description: Unleash the power of data and predict the future with our cutting-edge Average Weekly Price Predictor for S&P 500 stocks, built on the foundation of meticulous analysis and historical trends. This remarkable tool leverages the previous 14-week averages to provide you with an intelligent forecast, granting you a glimpse into the upcoming week's price trends like never before."
     const tooltips = "Usage: Embark on your journey to financial success by simply inputting a dynamic CSV table with columns expertly numbered from 0 to 13. Brace yourself for the awe-inspiring moment as our model unveils its predictions, presenting you with the average projections tailored specifically for the forthcoming week. Prepare to be amazed by its accuracy and insight."
