@@ -9,27 +9,32 @@ import FullStackServices from './components/pages/FullStackServices'
 import Research from './components/pages/Research'
 
 export const App = () => {
-        return (
-            <div style={style}>
+    return (
+        <div style={style}>
             <DataState>
                 <Router>
-                <Header />
+                    <Header />
                     <Routes>
-                        <Route exact path ="/" element={<Profile />} />
-                        <Route exact path ="/projects" element={<Projects />} />
-                        <Route exact path ="/services" element={<FullStackServices />} />
-                        <Route exact path ="/research" element={<Research />} />
+                        <Route exact path="/" element={<Profile />} />
+                        <Route exact path="/projects" element={<Projects />} />
+                        <Route exact path="/services" element={<FullStackServices />} />
+                        <Route exact path="/research" element={<Research />} />
                     </Routes>
                 </Router>
             </DataState>
-            </div>
+        </div>
     )
 }
+
 const style = {
-    backgroundImage:`url(${background})`,
-    backgroundRepeat:"no-repeat",
-    backgroundAttachment:"fixed",
-    backgroundPosition:"center",
-    backgroundSize:"cover"
+    backgroundImage: `url(${background})`,
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    minHeight: "100vh", // Ensures the background covers the full viewport height
+    minWidth: "100vw",   // Ensures the background covers the full viewport width
+    overflow: "hidden"   // Prevents extra scrolling
 }
+
 export default App
