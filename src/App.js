@@ -6,6 +6,8 @@ import Profile from "./components/pages/Profile"
 import Projects from './components/pages/Projects'
 import background from './assets/bg2.png'
 import FullStackServices from './components/pages/FullStackServices'
+import Research from './components/pages/Research'
+
 export const App = () => {
         return (
             <div style={style}>
@@ -16,6 +18,7 @@ export const App = () => {
                         <Route exact path ="/" element={<Profile />} />
                         <Route exact path ="/projects" element={<Projects />} />
                         <Route exact path ="/services" element={<FullStackServices />} />
+                        <Route exact path ="/research" element={<Research />} />
                     </Routes>
                 </Router>
             </DataState>

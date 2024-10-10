@@ -1,5 +1,6 @@
-import { GET_BLOGS, POST_FEEDBACK, GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
-       SET_ERROR, CLEAR_ERROR, STOP_LOADING} from "./types";
+import { GET_TRADES,GET_BLOGS, POST_FEEDBACK, GET_LOL, GET_NEWS, GET_PRICE, GET_SONG, SET_TITLE, SET_TEXT, SET_LOADING,
+       SET_ERROR, CLEAR_ERROR, STOP_LOADING,
+       GET_VISUALIZATION} from "./types";
 
 const main_reducer = (state,action) => {
     switch(action.type) {
@@ -71,6 +72,18 @@ const main_reducer = (state,action) => {
             return {
                 ...state,
                 blogs:action.payload.blogs,
+                loading:false
+            }
+        case GET_TRADES:
+        return {
+            ...state,
+            trades:action.payload.trades,
+            loading:false
+        }
+        case GET_VISUALIZATION:
+            return {
+                ...state,
+                visualization:action.payload.visualization,
                 loading:false
             }
     }

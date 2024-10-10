@@ -9,6 +9,8 @@ import {
         GET_NEWS,
         GET_LOL,
         GET_BLOGS,
+        GET_VISUALIZATION,
+        GET_TRADES,
         POST_FEEDBACK
     } from "./types";
 
@@ -25,6 +27,8 @@ const DataState = props => {
         news:{},
         lol:{},
         blogs:[],
+        trades:[],
+        visualization:[],
         feedback:{},
         error:null,
         loading:false
@@ -176,6 +180,34 @@ const DataState = props => {
         }
       };
 
+      const getTrades = async () => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api/trades`);
+          dispatch({
+            type: GET_TRADES,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
+      const getVisualization = async () => {
+        try {
+          setLoading();
+          const response = await axios.get(`${base_url}/api/api/visualization`);
+          dispatch({
+            type: GET_VISUALIZATION,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
     
 
     return (
@@ -190,12 +222,16 @@ const DataState = props => {
             lol:state.lol,
             feedback:state.feedback,
             blogs:state.blogs,
+            trades:state.trades,
+            visualization:state.visualization,
             getBlogs,
             postFeedback,
             getLol,
             getNews,
             getPrice,
             getSong,
+            getTrades,
+            getVisualization,
             setTitle,
             clearError,
             setError
