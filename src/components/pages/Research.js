@@ -6,7 +6,7 @@ import StrategyDescription from '../data/StrategyDescription';
 
 const Research = () => {
     const { title, getTrades, getVisualization } = useContext(dataContext);
-    const [showDescription, setShowDescription] = useState(true); // State for toggling views
+    const [showDescription, setShowDescription] = useState(false); // State for toggling views
     const [selectedStrategy, setSelectedStrategy] = useState('single_index_quarterly'); // State for the selected dropdown option
 
     useEffect(() => {
