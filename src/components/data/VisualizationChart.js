@@ -20,23 +20,32 @@ const VisualizationChart = () => {
     return: entry.return,
     ir_return: entry.ir_return,
     benchmark_return: entry.benchmark_return,
-    sharpe_return: entry.sharpe_return,
+    sharpe_ratio: entry.sharpe_ratio,
   }));
 
   return (
-    <div classname="mt-5"style={{ width: '100%', height: 600 }}>
+    <div className="mt-5" style={{ width: '100%', height: 600 }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={processedData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
+          
+          {/* First Y-axis for returns */}
           <YAxis />
+          
+          {/* Second Y-axis for Sharpe Ratio */}
+          <YAxis yAxisId="right" orientation="right" />
+          
           <Tooltip />
           <Legend />
-          
+
+          {/* Lines for returns */}
           <Line type="monotone" dataKey="return" stroke="red" />
           <Line type="monotone" dataKey="benchmark_return" stroke="blue" />
           <Line type="monotone" dataKey="ir_return" stroke="green" />
-          <Line type="monotone" dataKey="sharpe_return" stroke="purple" />
+          
+          {/* Line for Sharpe Ratio */}
+          <Line type="monotone" dataKey="sharpe_ratio" stroke="purple" yAxisId="right" />
         </LineChart>
       </ResponsiveContainer>
     </div>
