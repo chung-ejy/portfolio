@@ -3,9 +3,9 @@ import React from 'react';
 const StrategyDescription = () => {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h2>Fundamental Factor Loading Strategy</h2>
+      <h2>Magnificent Seven Factor Loading Strategy</h2>
       <p>
-        This stock strategy compares the performance of a fundamental factor-driven stock selection approach against the S&P 500. It leverages machine learning and the Capital Asset Pricing Model (CAPM) to estimate excess returns for Russell 1000 stocks.
+        This stock strategy compares the performance of a technology factor-driven stock selection approach against the S&P 500. It leverages machine learning and the Capital Asset Pricing Model (CAPM) to estimate excess returns for Russell 1000 stocks.
       </p>
       <p>
         The analysis begins by retrieving the Russell 1000 index data, followed by obtaining the market risk-free rate and the S&P 500 price series. A set of major stocks—Amazon, Nvidia, Apple, Meta, Google, Tesla, and Microsoft—are used as factors for training the machine learning model (XGBoost Regressor).
