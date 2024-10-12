@@ -24,7 +24,6 @@ const VisualizationChart = () => {
 
   return (
     <div classname="mt-5"style={{ width: '100%', height: 600 }}>
-      <h1>Short Term Single Index Factor Model</h1>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={processedData}>
           <CartesianGrid strokeDasharray="3 3" />
