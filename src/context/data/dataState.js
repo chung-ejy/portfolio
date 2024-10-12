@@ -180,10 +180,15 @@ const DataState = props => {
         }
       };
 
-      const getTrades = async () => {
+      const getTrades = async (strategy_name) => {
         try {
           setLoading();
-          const response = await axios.get(`${base_url}/api/api/trades`);
+          const response = await axios.get(`${base_url}/api/api/trades`, {
+            params: {
+                strategy_name: strategy_name
+            }
+        });
+        ;
           dispatch({
             type: GET_TRADES,
             payload: response.data
@@ -194,10 +199,14 @@ const DataState = props => {
         }
       };
 
-      const getVisualization = async () => {
+      const getVisualization = async (strategy_name) => {
         try {
           setLoading();
-          const response = await axios.get(`${base_url}/api/api/visualization`);
+          const response = await axios.get(`${base_url}/api/api/visualization`,{
+            params: {
+                strategy_name: strategy_name
+            }
+        });
           dispatch({
             type: GET_VISUALIZATION,
             payload: response.data
