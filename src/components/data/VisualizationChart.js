@@ -20,6 +20,7 @@ const VisualizationChart = () => {
     return: entry.return,
     ir_return: entry.ir_return,
     benchmark_return: entry.benchmark_return,
+    sharpe_return: entry.sharpe_return,
   }));
 
   return (
@@ -35,6 +36,7 @@ const VisualizationChart = () => {
           <Line type="monotone" dataKey="return" stroke="red" />
           <Line type="monotone" dataKey="benchmark_return" stroke="blue" />
           <Line type="monotone" dataKey="ir_return" stroke="green" />
+          <Line type="monotone" dataKey="sharpe_return" stroke="purple" />
         </LineChart>
       </ResponsiveContainer>
     </div>
