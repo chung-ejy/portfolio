@@ -20,7 +20,7 @@ const StrategyDescription = () => {
         Excess Return = Risk-Free Rate + Beta × (Expected Return - Risk-Free Rate)
       </blockquote>
       <p>
-        Stocks are ranked by their excess return, and the strategy will only switch positions within an industry if another stock in the same industry exhibits a higher excess return than the current holding.
+        Stocks are ranked by their excess return, and the strategy reweights every quarter.
       </p>
       <p>
         <a href="https://github.com/chung-ejy/sapling/blob/main/strategy/magnificent_seven_quarterly.py" target="_blank" rel="noopener noreferrer">
