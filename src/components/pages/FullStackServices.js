@@ -82,7 +82,7 @@ const FullStackServices = () => {
             to me and we can go on this dank journey to positive cash flows together. Please add "FSS" to the header of your
             email.
         </p>
-        <h6>Email: avocadoedevs@gmail.com</h6>
+        <h6>Email: chung.ejy@gmail.com</h6>
         </div>
       </div> 
         </div>
