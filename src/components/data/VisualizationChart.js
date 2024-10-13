@@ -27,7 +27,7 @@ const VisualizationChart = () => {
     <div className="mt-5" style={{ width: '100%', height: 600 }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={processedData}>
-          <CartesianGrid strokeDasharray="3 3" />
+          {/* <CartesianGrid strokeDasharray="3 3" /> */}
           <XAxis dataKey="date" />
           
           {/* First Y-axis for returns */}
@@ -39,13 +39,11 @@ const VisualizationChart = () => {
           <Tooltip />
           <Legend />
 
-          {/* Lines for returns */}
-          <Line type="monotone" dataKey="return" stroke="red" />
-          <Line type="monotone" dataKey="benchmark_return" stroke="blue" />
-          <Line type="monotone" dataKey="ir_return" stroke="green" />
-          
-          {/* Line for Sharpe Ratio */}
-          <Line type="monotone" dataKey="sharpe_ratio" stroke="purple" yAxisId="right" />
+          <Line type="monotone" dataKey="return" stroke="red" dot={false} />
+          <Line type="monotone" dataKey="benchmark_return" stroke="blue" dot={false} />
+          <Line type="monotone" dataKey="ir_return" stroke="green" dot={false} />
+          <Line type="monotone" dataKey="sharpe_ratio" stroke="purple" yAxisId="right" dot={false} />
+
         </LineChart>
       </ResponsiveContainer>
     </div>
