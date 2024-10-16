@@ -29,9 +29,7 @@ const ReportedForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(state)
     getChat(state);
-    console.log(chat)
   };
 
   return (loading ? <Loading />
