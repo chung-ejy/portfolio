@@ -11,7 +11,8 @@ import {
         GET_BLOGS,
         GET_VISUALIZATION,
         GET_TRADES,
-        POST_FEEDBACK
+        POST_FEEDBACK,
+        GET_CHAT
     } from "./types";
 
 import React, { useReducer } from "react";
@@ -26,6 +27,7 @@ const DataState = props => {
         song:{},
         news:{},
         lol:{},
+        chat:{},
         blogs:[],
         trades:[],
         visualization:[],
@@ -152,6 +154,23 @@ const DataState = props => {
         }
       };
 
+      const getChat = async (data) => {
+        try {
+          setLoading();
+          const response = await axios.post(`${base_url}/api/api`, data,{"headers": {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken'), 
+          }});
+          dispatch({
+            type: GET_CHAT,
+            payload: response.data
+          });
+        } catch (err) {
+          stopLoading();
+          setError(err.message, "danger");
+        }
+      };
+
       const postFeedback = async (data) => {
         try {
           setLoading();
@@ -232,7 +251,9 @@ const DataState = props => {
             feedback:state.feedback,
             blogs:state.blogs,
             trades:state.trades,
+            chat:state.chat,
             visualization:state.visualization,
+            getChat,
             getBlogs,
             postFeedback,
             getLol,

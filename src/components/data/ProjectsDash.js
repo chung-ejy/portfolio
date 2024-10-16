@@ -6,6 +6,8 @@ import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
 import DopaDesc from './DopaDesc';
 import FeedbackForm from './FeedbackForm'
+import ReportedForm from './ReportedForm';
+import ReportedDesc from './ReportedDesc';
 const ProjectsDash = () => {
     const dataContext = useContext(DataContext);
     const { title, setTitle } = dataContext
@@ -21,7 +23,8 @@ const ProjectsDash = () => {
                       "Comet":"fas fa-xl fa-meteor",
                       "Shuffle":"fas fa-xl fa-music",
                       "Faker":"fas fa-xl fa-rss" ,
-                      "Dopa":"fas fa-xl fa-laugh-squint"
+                      "Dopa":"fas fa-xl fa-laugh-squint",
+                      "Reported":"fas fa-xl fa-exclamation-circle"
                     }
     return (
       <div className="card card-body mt-4 mb-4 bg-light">
@@ -46,7 +49,8 @@ const ProjectsDash = () => {
             ) : title === "Shuffle" ?(
               <ShuffleDesc />
             ) : title === "Faker" ? <FakerDesc />
-            : <DopaDesc />}
+            : title === "Dopa" ?<DopaDesc /> : <ReportedDesc />
+            }
           </div>
         </div>
         <div className="row h-5">
