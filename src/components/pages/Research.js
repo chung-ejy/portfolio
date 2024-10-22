@@ -23,7 +23,7 @@ const Research = () => {
         setSelectedStrategy(event.target.value); // Update selected strategy
     };
 
-    const strategies = ["single_index_quarterly", "korean_tech_quarterly", "magnificent_seven_quarterly", "financial_statement_quarterly","optimal_quarterly"];
+    const strategies = ["single_index_quarterly", "korean_tech_quarterly", "magnificent_seven_quarterly", "financial_statement_quarterly","optimal_quarterly","kr_financial_statement_yearly"];
 
     return (
         <div className="container">
