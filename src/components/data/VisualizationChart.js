@@ -41,8 +41,8 @@ const VisualizationChart = () => {
 
           <Line type="monotone" dataKey="return" stroke="red" dot={false} />
           <Line type="monotone" dataKey="benchmark_return" stroke="blue" dot={false} />
-          <Line type="monotone" dataKey="ir_return" stroke="green" dot={false} />
-          <Line type="monotone" dataKey="sharpe_ratio" stroke="purple" yAxisId="right" dot={false} />
+          {/* <Line type="monotone" dataKey="ir_return" stroke="green" dot={false} /> */}
+          {/* <Line type="monotone" dataKey="sharpe_ratio" stroke="purple" yAxisId="right" dot={false} /> */}
 
         </LineChart>
       </ResponsiveContainer>
