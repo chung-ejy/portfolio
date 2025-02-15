@@ -22,7 +22,7 @@ const FullStackServices = () => {
                 <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$5000</td></tr>
                 </tbody>
             </table>
-            <p className="card-text">
+            <p className="card-text mb-2">
             A skeleton web application providing the core services the product is revolved around. Very similar to 
             the project samples that are provided in the projects tab.
             </p>
@@ -38,7 +38,7 @@ const FullStackServices = () => {
                 <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$10000</td></tr>
                 </tbody>
             </table>
-            <p className="card-text">
+            <p className="card-text mb-2">
             A more dedicated web application with a more client / consumer friendly UI. Would be similar to this portfolio website in its entirety. 
             </p>
         </div>
