@@ -15,6 +15,9 @@ const SaplingProductCard = () => {
               <li>✅ <strong>Real-Time Market Insights</strong> – Stay ahead of trends</li>
               <li>✅ <strong>No Emotions, Just Data</strong> – Remove human error from investing</li>
             </ul>
+            <a href="mailto:chung.ejy@gmail.com" className="btn btn-primary mt-3">
+              📩 Email Me! chung.ejy@gmail.com
+            </a>
           </div>
           <div className="col card m-1 align-item-center"> 
         <h3 className="mt-3">Stock Portfolio</h3>

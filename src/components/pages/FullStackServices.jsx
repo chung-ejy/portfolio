@@ -3,10 +3,9 @@ import SaplingProductCard from '../data/SaplingProductCard';
 const FullStackServices = () => {
   return (
 
-    <div className="container">
+    <div className="container mt-2">
     <SaplingProductCard />
-    <div className="card card-body text-center bg-light">
-        <div className="card card-body mt-2">
+        <div className="container card card-body mt-2 text-center bg-light py-5">
         <h1 className="text-primary">Full Stack Web App Services</h1>
         <h2 className="text-secondary">Calling all ideas. </h2>
         <h3 className="text-secondary">Come to life with these product offerings</h3>
@@ -88,7 +87,6 @@ const FullStackServices = () => {
         </div>
       </div> 
         </div>
-    </div>
     </div>
   );
 };
