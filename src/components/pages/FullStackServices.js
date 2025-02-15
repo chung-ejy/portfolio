@@ -19,8 +19,7 @@ const FullStackServices = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Hours</td><td className="d-none d-lg-table-cell">8</td></tr>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$400</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$5000</td></tr>
                 </tbody>
             </table>
             <p className="card-text">
@@ -36,8 +35,7 @@ const FullStackServices = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Hours</td><td className="d-none d-lg-table-cell">20</td></tr>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$1000</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$10000</td></tr>
                 </tbody>
             </table>
             <p className="card-text">
@@ -45,7 +43,7 @@ const FullStackServices = () => {
             </p>
         </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
         <div className="col card m-1 align-item-center">    
         <h3 className="mt-3">POC Timeline</h3>
 
@@ -78,7 +76,7 @@ const FullStackServices = () => {
                 </tbody>
             </table>
         </div>
-        </div>
+        </div> */}
         <div className="row">
         <div className="col align-item-center">
         <p className="m-2"> If any of the projects peaked your interest and you have an idea you would like to develop, please feel free to reach out
