@@ -1,8 +1,9 @@
 import React from 'react';
+import SaplingProductCard from '../data/SaplingProductCard';
 const FullStackServices = () => {
   return (
 
-    <div className="card">
+    <div className="container">
     <SaplingProductCard />
     <div className="card card-body text-center bg-light">
         <div className="card card-body mt-2">
