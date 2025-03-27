@@ -43,40 +43,6 @@ const FullStackServices = () => {
             </p>
         </div>
         </div>
-        {/* <div className="row">
-        <div className="col card m-1 align-item-center">    
-        <h3 className="mt-3">POC Timeline</h3>
-
-            <table className="table table-responsive-sm text-center">
-                <thead>
-                    <tr><th>Hour</th><th className="d-none d-lg-table-cell">Purpose</th></tr>
-                </thead>
-                <tbody>
-                <tr><td className="d-lg-table-cell">1</td><td className="d-none d-lg-table-cell">Introductions</td></tr>
-                <tr><td className="d-lg-table-cell">2</td><td className="d-none d-lg-table-cell">Product Discussion I</td></tr>
-                <tr><td className="d-lg-table-cell">3-6</td><td className="d-none d-lg-table-cell">Coding / Product Iterations</td></tr>
-                <tr><td className="d-lg-table-cell">7</td><td className="d-none d-lg-table-cell">Debrief</td></tr>
-                <tr><td className="d-lg-table-cell">8</td><td className="d-none d-lg-table-cell">Hand off</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div className="col card m-1 align-item-center">    
-        <h3 className="mt-3">MVP Timeline</h3>
-            <table className="table table-responsive-sm text-center">
-                <thead>
-                    <tr><th>Hour</th><th className="d-none d-lg-table-cell">Purpose</th></tr>
-                </thead>
-                <tbody>
-                <tr><td className="d-lg-table-cell">8</td><td className="d-none d-lg-table-cell">Product Discussion II</td></tr>
-                <tr><td className="d-lg-table-cell">9-13</td><td className="d-none d-lg-table-cell">Coding / Product Iterations</td></tr>
-                <tr><td className="d-lg-table-cell">13</td><td className="d-none d-lg-table-cell">Product Discussion III</td></tr>
-                <tr><td className="d-lg-table-cell">14-18</td><td className="d-none d-lg-table-cell">Coding / Product Iterations</td></tr>
-                <tr><td className="d-lg-table-cell">18 - 20</td><td className="d-none d-lg-table-cell">Debrief / Handoff</td></tr>
-                </tbody>
-            </table>
-        </div>
-        </div> */}
         <div className="row">
         <div className="col align-item-center">
         <p className="m-2"> If any of the projects peaked your interest and you have an idea you would like to develop, please feel free to reach out

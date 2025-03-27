@@ -16,7 +16,7 @@ const Header = () =>{
     return (
             <nav className="navbar navbar-expand-lg bg-primary">
                 <div className="container-fluid text-light">
-                <a className="navbar-brand text-light" href="/">Portfolio</a>
+                <a className="navbar-brand text-light" href="/">ejchungie</a>
                 {navItems}
 
                 </div>
