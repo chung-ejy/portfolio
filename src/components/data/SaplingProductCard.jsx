@@ -7,13 +7,13 @@ const SaplingProductCard = () => {
             <h1 className="fw-bold">Invest Smarter with AI-Powered Automation! 🚀</h1>
             <p className="lead text-muted">
               Tired of guessing the markets? Let <strong>Sapling</strong> do the heavy lifting!
-              Our AI-driven portfolio optimizes your investments in <strong>stocks & crypto</strong> 24/7, so you never miss an opportunity.
+              Our AI-driven portfolio optimizes your investment research in <strong>stocks & crypto</strong> 24/7, so you never miss an opportunity.
             </p>
             <ul className="list-unstyled">
               <li>✅ <strong>Auto-Rebalance</strong> – Keep your portfolio optimized effortlessly</li>
               <li>✅ <strong>Smart Risk Management</strong> – Minimize losses, maximize gains</li>
               <li>✅ <strong>Real-Time Market Insights</strong> – Stay ahead of trends</li>
-              <li>✅ <strong>No Emotions, Just Data</strong> – Remove human error from investing</li>
+              <li>✅ <strong>No Emotions, Just Data</strong> – Remove human error from investing research</li>
             </ul>
             <a href="mailto:chung.ejy@gmail.com" className="btn btn-primary mt-3">
               📩 Email Me! chung.ejy@gmail.com
@@ -27,7 +27,7 @@ const SaplingProductCard = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$10000</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$1000</td></tr>
                 </tbody>
             </table>
         </div>
@@ -39,7 +39,7 @@ const SaplingProductCard = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$10000</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$1000</td></tr>
                 </tbody>
             </table>
         </div>

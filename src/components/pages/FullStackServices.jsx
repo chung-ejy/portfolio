@@ -19,7 +19,7 @@ const FullStackServices = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$5000</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$500</td></tr>
                 </tbody>
             </table>
             <p className="card-text mb-2">
@@ -35,7 +35,7 @@ const FullStackServices = () => {
                     <tr><th>Details</th><th className="d-none d-lg-table-cell">Values</th></tr>
                 </thead>
                 <tbody>
-                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$10000</td></tr>
+                <tr><td className="d-lg-table-cell">Price</td><td className="d-none d-lg-table-cell">$1000</td></tr>
                 </tbody>
             </table>
             <p className="card-text mb-2">
