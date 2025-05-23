@@ -6,8 +6,7 @@ import DataContext from '../../context/data/dataContext';
 import FakerDesc from './FakerDesc'
 import DopaDesc from './DopaDesc';
 import FeedbackForm from './FeedbackForm'
-import ReportedForm from './ReportedForm';
-import ReportedDesc from './ReportedDesc';
+import OritudeDesc from './OritudeDesc';
 const ProjectsDash = () => {
     const dataContext = useContext(DataContext);
     const { title, setTitle } = dataContext
@@ -16,15 +15,14 @@ const ProjectsDash = () => {
       setTitle(e.target.name);
     };
 
-    useEffect(() => {
-
-    }, [title]);
-    const projects = {"Longshot":"fas fa-xl fa-location-arrow",
+    const projects = {
+                      "Oritude":"fas fa-xl fa-wind",
+                      "Sapling":"fas fa-xl fa-location-arrow",
                       "Comet":"fas fa-xl fa-meteor",
                       "Shuffle":"fas fa-xl fa-music",
                       "Faker":"fas fa-xl fa-rss" ,
                       "Dopa":"fas fa-xl fa-laugh-squint",
-                      "Reported":"fas fa-xl fa-exclamation-circle"
+
                     }
     return (
       <div className="card card-body mt-4 mb-4 bg-light">
@@ -42,14 +40,14 @@ const ProjectsDash = () => {
         </div>
         <div className="row h-5">
           <div className="col">
-            {title === "Longshot" ? (
+            {title === "Sapling" ? (
               <LongshotDesc />
             ) : title === "Comet" ? (
               <CometDesc />
             ) : title === "Shuffle" ?(
               <ShuffleDesc />
             ) : title === "Faker" ? <FakerDesc />
-            : title === "Dopa" ?<DopaDesc /> : <ReportedDesc />
+            : title === "Dopa" ?<DopaDesc /> : <OritudeDesc />
             }
           </div>
         </div>

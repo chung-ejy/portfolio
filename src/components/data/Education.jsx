@@ -16,7 +16,7 @@ const Education = () => {
                     Bachelor's of Computer Science and Finance
                 </td>
                 <td className="d-lg-table-cell">
-                    September 2013 - January 2025
+                    September 2013 - Present
                 </td>
             </tr>
         </tbody>
