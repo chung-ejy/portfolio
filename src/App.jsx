@@ -27,7 +27,7 @@ export const App = () => {
 }
 
 const style = {
-    backgroundImage: `url(${background})`,
+    // backgroundImage: `url(${background})`,
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
