@@ -31,7 +31,7 @@ const ShuffleDesc = () => {
             </tr>
         </tbody>
     </table>
-    <ShuffleForm />
+    {/* <ShuffleForm /> */}
     <p className="m-2">
         {description}
     </p>

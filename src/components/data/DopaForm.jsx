@@ -15,14 +15,14 @@ const DopaForm = () => {
             "FirstInhibitor":false,
             "tier":"gm",
             "side":1,
-            project:title,
+            project:"Dopa",
           }));
         }
       }, [lol,loading]);
     const onChange = (e) => {
             setState({...state,
                 [e.target.name]:e.target.checked,
-            project:title});
+            project:"Dopa"});
         } 
 
     const onSubmit = (e) => {

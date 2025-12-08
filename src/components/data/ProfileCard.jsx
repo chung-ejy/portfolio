@@ -42,8 +42,10 @@ const ProfileCard = () => {
 const imageStyle = {
   display: "inline",
   border:"solid 2px grey",
-  width:"auto",
-  height:"200px",
+  width: "300px",
+  height: "300px",
+  objectFit: "cover",
+  objectPosition: "center 27%",  
   borderRadius:"50%"
 }
 export default ProfileCard;

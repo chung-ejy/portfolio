@@ -31,7 +31,7 @@ const FakerDesc = () => {
             </tr>
         </tbody>
     </table>
-    <FakerForm />
+    {/* <FakerForm /> */}
     <p className="m-2">
         {description}
     </p>

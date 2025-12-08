@@ -31,7 +31,7 @@ const DopaDesc = () => {
             </tr>
         </tbody>
     </table>
-    <DopaForm />
+    {/* <DopaForm /> */}
     <p className="m-2">
         {description}
     </p>

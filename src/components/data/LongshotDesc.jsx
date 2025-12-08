@@ -27,7 +27,7 @@ const LongshotDesc = () => {
                         </tr>
                     </tbody>
                 </table>
-                <PriceForm />
+                {/* <PriceForm /> */}
                 <p className="m-2">
                     {description}
                 </p>
