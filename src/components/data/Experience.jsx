@@ -20,7 +20,7 @@ const Experience = () => {
                                 Northeastern University
                             </a>
                         </td>
-                        <td className="d-none d-lg-table-cell">Consulting Operations Co-op</td>
+                        <td className="d-none d-lg-table-cell">Business Analyst Co-op</td>
                         <td className="d-lg-table-cell">September 2025 - December 2025</td>
                     </tr>
                     <tr>
@@ -29,7 +29,7 @@ const Experience = () => {
                                 Amazon
                             </a>
                         </td>
-                        <td className="d-none d-lg-table-cell">Solutions Integration Co-op</td>
+                        <td className="d-none d-lg-table-cell">Data Analyst Co-op</td>
                         <td className="d-lg-table-cell">July 2018 - December 2018</td>
                     </tr>
                     <tr>
@@ -47,7 +47,7 @@ const Experience = () => {
                                 Wellington Management
                             </a>
                         </td>
-                        <td className="d-none d-lg d-lg-table-cell">Guideline Monitoring Co-op</td>
+                        <td className="d-none d-lg d-lg-table-cell">Investment Compliance Co-op</td>
                         <td className="d-lg-table-cell">December 2016 - July 2017</td>
                     </tr>
                     <tr>
