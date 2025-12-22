@@ -15,7 +15,7 @@ const ProfileDash = () => {
   return (
     <div className="card card-body md-10 mb-3 mt-5 text-center bg-light">
         <div className="row">
-        <h1 className="text-primary">Eric Chung</h1>
+        <h1 className="text-primary">Eric J. Chung</h1>
           <ProfileCard />
         </div>
           <div className="row"><button className="btn btn-outline-primary btn-block" onClick={onChange}>{state}</button></div>

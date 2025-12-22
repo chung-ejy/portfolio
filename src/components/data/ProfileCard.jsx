@@ -7,7 +7,7 @@ const ProfileCard = () => {
         <div className="col align-item-center">
           <img alt="myface" className="img-fluid" style={imageStyle} src={headshot}></img>
           <div className="row mt-3">
-        <h6>Machine Learning Developer / Gamer 
+        <h6>Business Analyst / Quantitative Researcher
         </h6>
         <h6>chung.ejy@gmail.com</h6>
       </div>

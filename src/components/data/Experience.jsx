@@ -16,8 +16,17 @@ const Experience = () => {
                 <tbody>
                     <tr>
                         <td className="d-lg-table-cell">
-                            <a href="https://www.youtube.com/watch?v=kxNkfW0OXcM" target="_blank" rel="noopener noreferrer">
-                                Amazon Robotics
+                            <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer">
+                                Northeastern University
+                            </a>
+                        </td>
+                        <td className="d-none d-lg-table-cell">Consulting Operations Co-op</td>
+                        <td className="d-lg-table-cell">September 2025 - December 2025</td>
+                    </tr>
+                    <tr>
+                        <td className="d-lg-table-cell">
+                            <a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
+                                Amazon
                             </a>
                         </td>
                         <td className="d-none d-lg-table-cell">Solutions Integration Co-op</td>
