@@ -24,7 +24,7 @@ const ProfileCard = () => {
         </div>
         <div className="col m-1">
           <h3 className="">
-          <a href="https://open.spotify.com/playlist/6qwHbTZBvcOC9fqPrzhpNI?si=7eeedbe18f2e4a2c"><i className={`fab fa-spotify fa-lg text-primary mt-3`}></i></a>
+          <a href="https://open.spotify.com/playlist/4n8TPG3f62JL12NLJBs8rv?si=8b953cddd37649d2"><i className={`fab fa-spotify fa-lg text-primary mt-3`}></i></a>
           </h3>
         </div>
         <div className="col m-1">
