@@ -5,7 +5,7 @@ const OritudeDesc = () => {
   const title = "Oritude";
   const tagline = "Quantitative Finance Web Application";
   const dates = "April 2025 - Present";
-  const projectLink = "https://oritude.onrender.com/oriflections";
+  const projectLink = "https://github.com/chung-ejy/oritude";
   const description = `
     Description: Quantitative finance web application to showcase research and a fun backtesting app. 
     Currently prototyping and would love to gain some feedback.
