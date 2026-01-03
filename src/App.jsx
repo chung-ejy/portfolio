@@ -18,7 +18,7 @@ export const App = () => {
                         <Route exact path="/" element={<Profile />} />
                         <Route exact path="/projects" element={<Projects />} />
                         <Route exact path="/services" element={<FullStackServices />} />
-                        <Route exact path="/research" element={<Research />} />
+                        {/* <Route exact path="/research" element={<Research />} /> */}
                     </Routes>
                 </Router>
             </DataState>
